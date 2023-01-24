@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.role.pabrikan.purchase_order.ListMonitoringPurchase">
+    android:padding="10dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_daftarList"
@@ -24,7 +24,7 @@
             <View
                 android:id="@+id/vw_line"
                 android:layout_width="5dp"
-                android:layout_height="165dp"
+                android:layout_height="230dp"
                 android:background="@drawable/dashboard"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -79,14 +79,13 @@
                 android:id="@+id/txt_titik2nomaterial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
+                android:layout_marginStart="10dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
                 android:textColor="#3F3D56"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@id/txt_nomaterial"
-                app:layout_constraintStart_toEndOf="@id/txt_nomaterial"
-                app:layout_constraintTop_toTopOf="@id/txt_nomaterial" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_nomaterial" />
 
             <TextView
                 android:id="@+id/txt_material"
@@ -109,7 +108,7 @@
                 android:layout_marginTop="8dp"
                 android:src="@drawable/plant_list_monitoring1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_nomaterial" />
+                app:layout_constraintTop_toBottomOf="@id/txt_material" />
 
             <TextView
                 android:id="@+id/txt_batch"
@@ -127,14 +126,13 @@
                 android:id="@+id/txt_titik2batch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
+                android:layout_marginStart="10dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
                 android:textColor="#3F3D56"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@id/txt_batch"
-                app:layout_constraintStart_toEndOf="@id/txt_batch"
-                app:layout_constraintTop_toTopOf="@id/txt_batch" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_batch" />
 
             <TextView
                 android:id="@+id/txt_isiBatch"
@@ -159,7 +157,7 @@
                 android:layout_marginTop="8dp"
                 android:src="@drawable/plant_list_monitoring1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_batch" />
+                app:layout_constraintTop_toBottomOf="@id/txt_isiBatch" />
 
             <TextView
                 android:id="@+id/txt_packaging"
@@ -177,14 +175,13 @@
                 android:id="@+id/txt_titik2packaging"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
+                android:layout_marginStart="10dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
                 android:textColor="#3F3D56"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@id/txt_packaging"
-                app:layout_constraintStart_toEndOf="@id/txt_packaging"
-                app:layout_constraintTop_toTopOf="@id/txt_packaging" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_packaging" />
 
             <TextView
                 android:id="@+id/txt_isiPackaging"
@@ -225,14 +222,13 @@
                 android:id="@+id/txt_titik2SPLN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
+                android:layout_marginStart="135dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
                 android:textColor="#3F3D56"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@id/txt_SPLN"
-                app:layout_constraintStart_toEndOf="@id/txt_SPLN"
-                app:layout_constraintTop_toTopOf="@id/txt_SPLN" />
+                app:layout_constraintStart_toEndOf="@+id/txt_material"
+                app:layout_constraintTop_toBottomOf="@id/txt_SPLN" />
 
             <TextView
                 android:id="@+id/txt_isiSPLN"
@@ -273,14 +269,13 @@
                 android:id="@+id/txt_titik2spesifikasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
+                android:layout_marginStart="135dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
                 android:textColor="#3F3D56"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@id/txt_spesifikasi"
-                app:layout_constraintStart_toEndOf="@id/txt_spesifikasi"
-                app:layout_constraintTop_toTopOf="@id/txt_spesifikasi" />
+                app:layout_constraintStart_toEndOf="@+id/txt_isiBatch"
+                app:layout_constraintTop_toBottomOf="@id/txt_spesifikasi" />
 
             <TextView
                 android:id="@+id/txt_isispesifikasi"
@@ -321,14 +316,13 @@
                 android:id="@+id/txt_titik2kategori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
+                android:layout_marginStart="135dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
                 android:textColor="#3F3D56"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@id/txt_kategori"
-                app:layout_constraintStart_toEndOf="@id/txt_kategori"
-                app:layout_constraintTop_toTopOf="@id/txt_kategori" />
+                app:layout_constraintStart_toEndOf="@+id/txt_isiPackaging"
+                app:layout_constraintTop_toBottomOf="@id/txt_kategori" />
 
             <TextView
                 android:id="@+id/txt_isikategori"
@@ -340,17 +334,6 @@
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2kategori"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2kategori"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2kategori" />
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="50dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/detail"
-                android:textColor="#019E24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

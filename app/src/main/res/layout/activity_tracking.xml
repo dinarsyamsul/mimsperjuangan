@@ -33,7 +33,7 @@
         android:layout_marginTop="58dp"
         android:layout_marginEnd="64dp"
         android:fontFamily="@font/montserrat_reguler"
-        android:text="Tracking Material"
+        android:text="History Material"
         android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -95,7 +95,7 @@
                 android:id="@+id/src_nomorBatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart  ="32dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/srchview"
@@ -119,19 +119,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/src_nomorBatch" />
 
-            <Spinner
-                android:id="@+id/tinp_pilihUrutan"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tinp_pilihKategorihistory"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="345dp"
-                android:layout_height="58dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/txt_input_layout"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
                 app:hintAnimationEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_kategori">
 
-            </Spinner>
+                <AutoCompleteTextView
+                    android:id="@+id/dropdown_history"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/txt_input_layout"
+                    android:inputType="none"
+                    android:text="Pilih Kategori" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <TextView
@@ -146,7 +157,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tinp_pilihUrutan" />
+                app:layout_constraintTop_toBottomOf="@+id/tinp_pilihKategorihistory" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_tanggal"
@@ -180,7 +191,7 @@
                     android:background="#FFFFFF">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_noPo"
+                        android:id="@+id/rv_trackinghistory"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:listitem="@layout/item_data_monitoring_purchase" />

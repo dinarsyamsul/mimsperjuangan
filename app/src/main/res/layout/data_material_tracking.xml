@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.role.pabrikan.purchase_order.MonitoringPurchaseOrderActivity">
-
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/header"
@@ -33,7 +31,7 @@
         android:layout_marginTop="58dp"
         android:layout_marginEnd="64dp"
         android:fontFamily="@font/montserrat_reguler"
-        android:text="Data Material"
+        android:text="Data History Material"
         android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -41,61 +39,1113 @@
         app:layout_constraintStart_toEndOf="@+id/btn_back"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_exporttrckg"
-        android:layout_width="130dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/bg_btn1"
-        android:drawableStart="@drawable/clipboard_3"
-        android:fontFamily="@font/montserrat_reguler"
-        android:padding="10dp"
-        android:text="Export"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"/>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="130dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/header">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:paddingBottom="10dp">
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_daftarList"
+            <View
+                android:id="@+id/vw_line"
+                android:layout_width="5dp"
+                android:layout_height="230dp"
+                android:background="@drawable/dashboard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_tanggalproduksitracking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:paddingBottom="10dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/plant_list_monitoring1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                tools:ignore="MissingConstraints" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#FFFFFF">
+            <TextView
+                android:id="@+id/txt_tanggalproduksitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="No Material"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tanggalproduksitracking"
+                app:layout_constraintStart_toEndOf="@id/img_tanggalproduksitracking"
+                app:layout_constraintTop_toTopOf="@id/img_tanggalproduksitracking" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_noPo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        tools:ignore="NotSibling"
-                        tools:listitem="@layout/item_data_monitoring_purchase" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/txt_titik2tanggalproduksitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_tanggalproduksitracking" />
+
+            <TextView
+                android:id="@+id/txt_isitanggalproduksitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="12312311"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tanggalproduksitracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tanggalproduksitracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tanggalproduksitracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_SNmaterialtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isitanggalproduksitracking" />
+
+            <TextView
+                android:id="@+id/txt_SNmaterialtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="SN Material"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_SNmaterialtracking"
+                app:layout_constraintStart_toEndOf="@id/img_SNmaterialtracking"
+                app:layout_constraintTop_toTopOf="@id/img_SNmaterialtracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2SNmaterialtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_SNmaterialtracking" />
+
+            <TextView
+                android:id="@+id/txt_isiSNmaterialtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="12312311"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2SNmaterialtracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2SNmaterialtracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2SNmaterialtracking" />
+
+            <!-- PEMBATAS -->
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_spesifikasitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isiSNmaterialtracking" />
+
+            <TextView
+                android:id="@+id/txt_spesifikasitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Spesifikasi"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_spesifikasitracking"
+                app:layout_constraintStart_toEndOf="@id/img_spesifikasitracking"
+                app:layout_constraintTop_toTopOf="@id/img_spesifikasitracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2spesifikasitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_spesifikasitracking" />
+
+            <TextView
+                android:id="@+id/txt_isispesifikasitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="12312311"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2spesifikasitracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2spesifikasitracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2spesifikasitracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_kategoritracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isispesifikasitracking" />
+
+            <TextView
+                android:id="@+id/txt_kategoritracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Kategori"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_kategoritracking"
+                app:layout_constraintStart_toEndOf="@id/img_kategoritracking"
+                app:layout_constraintTop_toTopOf="@id/img_kategoritracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2kategoritracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_kategoritracking" />
+
+            <TextView
+                android:id="@+id/txt_isikategoritracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="5112111223344"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2kategoritracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2kategoritracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2kategoritracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_noMeterologitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isikategoritracking" />
+
+            <TextView
+                android:id="@+id/txt_noMeterologitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="No Meterologi"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_noMeterologitracking"
+                app:layout_constraintStart_toEndOf="@id/img_noMeterologitracking"
+                app:layout_constraintTop_toTopOf="@id/img_noMeterologitracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2noMeterologitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_noMeterologitracking" />
+
+            <TextView
+                android:id="@+id/txt_isinoMeterologitracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2noMeterologitracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2noMeterologitracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2noMeterologitracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_noBatchtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isinoMeterologitracking" />
+
+            <TextView
+                android:id="@+id/txt_noBatchtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Kategori"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_noBatchtracking"
+                app:layout_constraintStart_toEndOf="@id/img_noBatchtracking"
+                app:layout_constraintTop_toTopOf="@id/img_noBatchtracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2noBatchtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_noBatchtracking" />
+
+            <TextView
+                android:id="@+id/txt_isinoBatchtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="5112111223344"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2noBatchtracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2noBatchtracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2noBatchtracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_up3awaltracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isinoBatchtracking" />
+
+            <TextView
+                android:id="@+id/txt_up3awaltracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="UP3 awal"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_up3awaltracking"
+                app:layout_constraintStart_toEndOf="@id/img_up3awaltracking"
+                app:layout_constraintTop_toTopOf="@id/img_up3awaltracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2up3awaltracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_up3awaltracking" />
+
+            <TextView
+                android:id="@+id/txt_isiup3awaltracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="APJ Bogor"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2up3awaltracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2up3awaltracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2up3awaltracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_ulptujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isiup3awaltracking" />
+
+            <TextView
+                android:id="@+id/txt_ulptujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="ULP Tujuan"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_ulptujuantracking"
+                app:layout_constraintStart_toEndOf="@id/img_ulptujuantracking"
+                app:layout_constraintTop_toTopOf="@id/img_ulptujuantracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2ulptujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_ulptujuantracking" />
+
+            <TextView
+                android:id="@+id/txt_isiulptujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Gd Bogor Kota"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2ulptujuantracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2ulptujuantracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2ulptujuantracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglpemeriksaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isiulptujuantracking" />
+
+            <TextView
+                android:id="@+id/txt_tglpemeriksaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Pemeriksaan"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglpemeriksaantracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglpemeriksaantracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglpemeriksaantracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglpemeriksaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_tglpemeriksaantracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglpemeriksaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="11/01/2022"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglpemeriksaantracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglpemeriksaantracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglpemeriksaantracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglpenerimaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isitglpemeriksaantracking" />
+
+            <TextView
+                android:id="@+id/txt_tglpenerimaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Penerimaan"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglpenerimaantracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglpenerimaantracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglpenerimaantracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglpenerimaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_tglpenerimaantracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglpenerimaantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="11/01/2022"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglpenerimaantracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglpenerimaantracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglpenerimaantracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_ulptujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isitglpenerimaantracking" />
+
+            <TextView
+                android:id="@+id/txt_ulptujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="ULP tujuan 2"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_ulptujuan2tracking"
+                app:layout_constraintStart_toEndOf="@id/img_ulptujuan2tracking"
+                app:layout_constraintTop_toTopOf="@id/img_ulptujuan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2ulptujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_ulptujuan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_isiulptujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Gd Bogor Kota"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2ulptujuan2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2ulptujuan2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2ulptujuan2tracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglpemeriksaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isiulptujuan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_tglpemeriksaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Pemeriksa"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglpemeriksaan2tracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglpemeriksaan2tracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglpemeriksaan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglpemeriksaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_tglpemeriksaan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglpemeriksaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="11/01/2022"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglpemeriksaan2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglpemeriksaan2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglpemeriksaan2tracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglpenerimaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isitglpemeriksaan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_tglpenerimaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Penerima"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglpenerimaan2tracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglpenerimaan2tracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglpenerimaan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglpenerimaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/txt_tglpenerimaan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglpenerimaan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="11/01/2022"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglpenerimaan2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglpenerimaan2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglpenerimaan2tracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_SPLNtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_tanggalproduksitracking"
+                app:layout_constraintStart_toEndOf="@id/txt_tanggalproduksitracking"
+                app:layout_constraintTop_toTopOf="@id/txt_tanggalproduksitracking" />
+
+            <TextView
+                android:id="@+id/txt_SPLNtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Kategori"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_SPLNtracking"
+                app:layout_constraintStart_toEndOf="@id/img_SPLNtracking"
+                app:layout_constraintTop_toTopOf="@id/img_SPLNtracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2SPLNtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isitanggalproduksitracking"
+                app:layout_constraintTop_toBottomOf="@id/txt_SPLNtracking" />
+
+            <TextView
+                android:id="@+id/txt_isiSPLNtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2SPLNtracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2SPLNtracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2SPLNtracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_noMaterialTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_SNmaterialtracking"
+                app:layout_constraintStart_toEndOf="@id/txt_SNmaterialtracking"
+                app:layout_constraintTop_toTopOf="@id/txt_SNmaterialtracking" />
+
+            <TextView
+                android:id="@+id/txt_noMaterialTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="No Material"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_noMaterialTracking"
+                app:layout_constraintStart_toEndOf="@id/img_noMaterialTracking"
+                app:layout_constraintTop_toTopOf="@id/img_noMaterialTracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2noMaterialTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isiSNmaterialtracking"
+                app:layout_constraintTop_toBottomOf="@id/txt_noMaterialTracking" />
+
+            <TextView
+                android:id="@+id/txt_isinoMaterialTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2noMaterialTracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2noMaterialTracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2noMaterialTracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_masagaransiTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_spesifikasitracking"
+                app:layout_constraintStart_toEndOf="@id/txt_spesifikasitracking"
+                app:layout_constraintTop_toTopOf="@id/txt_spesifikasitracking" />
+
+            <TextView
+                android:id="@+id/txt_masagaransiTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Masa Garansi"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_masagaransiTracking"
+                app:layout_constraintStart_toEndOf="@id/img_masagaransiTracking"
+                app:layout_constraintTop_toTopOf="@id/img_masagaransiTracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2masagaransiTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isispesifikasitracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_masagaransiTracking" />
+
+            <TextView
+                android:id="@+id/txt_isimasagaransiTracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2masagaransiTracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2masagaransiTracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2masagaransiTracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_nopackagingtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_noMeterologitracking"
+                app:layout_constraintStart_toEndOf="@id/txt_noMeterologitracking"
+                app:layout_constraintTop_toTopOf="@id/txt_noMeterologitracking" />
+
+            <TextView
+                android:id="@+id/txt_nopackagingtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="No Packaging"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_nopackagingtracking"
+                app:layout_constraintStart_toEndOf="@id/img_nopackagingtracking"
+                app:layout_constraintTop_toTopOf="@id/img_nopackagingtracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2nopackagingtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isinoMeterologitracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_nopackagingtracking" />
+
+            <TextView
+                android:id="@+id/txt_isinopackagingtracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2nopackagingtracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2nopackagingtracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2nopackagingtracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_up3awaltracking"
+                app:layout_constraintStart_toEndOf="@id/txt_up3awaltracking"
+                app:layout_constraintTop_toTopOf="@id/txt_up3awaltracking" />
+
+            <TextView
+                android:id="@+id/txt_tujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tujuan"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tujuantracking"
+                app:layout_constraintStart_toEndOf="@id/img_tujuantracking"
+                app:layout_constraintTop_toTopOf="@id/img_tujuantracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isiup3awaltracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_tujuantracking" />
+
+            <TextView
+                android:id="@+id/txt_isitujuantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tujuantracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tujuantracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tujuantracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglpemakaiantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_ulptujuantracking"
+                app:layout_constraintStart_toEndOf="@id/txt_ulptujuantracking"
+                app:layout_constraintTop_toTopOf="@id/txt_ulptujuantracking" />
+
+            <TextView
+                android:id="@+id/txt_tglpemakaiantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Pemakaian"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglpemakaiantracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglpemakaiantracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglpemakaiantracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglpemakaiantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isiulptujuantracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_tglpemakaiantracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglpemakaiantracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglpemakaiantracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglpemakaiantracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglpemakaiantracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglbongkartracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_tglpemeriksaantracking"
+                app:layout_constraintStart_toEndOf="@id/txt_tglpemeriksaantracking"
+                app:layout_constraintTop_toTopOf="@id/txt_tglpemeriksaantracking" />
+
+            <TextView
+                android:id="@+id/txt_tglbongkartracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Bongkar"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglbongkartracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglbongkartracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglbongkartracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglbongkartracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isitglpemeriksaantracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_tglbongkartracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglbongkartracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglbongkartracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglbongkartracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglbongkartracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_ulptujuan2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_ulptujuan2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_ulptujuan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_tujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tujuan"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tujuan2tracking"
+                app:layout_constraintStart_toEndOf="@id/img_tujuan2tracking"
+                app:layout_constraintTop_toTopOf="@id/img_tujuan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isiulptujuan2tracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_tujuan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_isitujuan2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tujuan2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tujuan2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tujuan2tracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglpemakaian2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_tglpemeriksaan2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_tglpemeriksaan2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_tglpemeriksaan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_tglpemakaian2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Pemakaian"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglpemakaian2tracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglpemakaian2tracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglpemakaian2tracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglpemakaian2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isitglpemeriksaan2tracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_tglpemakaian2tracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglpemakaian2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglpemakaian2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglpemakaian2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglpemakaian2tracking" />
+
+            <!-- PEMBATAS -->
+
+            <ImageView
+                android:id="@+id/img_tglbongkar2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/kuantitas_list_monitoring1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_tglpenerimaan2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_tglpenerimaan2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_tglpenerimaan2tracking" />
+
+            <TextView
+                android:id="@+id/txt_tglbongkar2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Tgl Pemakaian"
+                android:textColor="#3F3D56"
+                app:layout_constraintBottom_toBottomOf="@id/img_tglbongkar2tracking"
+                app:layout_constraintStart_toEndOf="@id/img_tglbongkar2tracking"
+                app:layout_constraintTop_toTopOf="@id/img_tglbongkar2tracking" />
+
+            <TextView
+                android:id="@+id/txt_titik2tglbongkar2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text=" : "
+                android:textColor="#3F3D56"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_isitglpenerimaan2tracking"
+                app:layout_constraintTop_toBottomOf="@+id/img_tglbongkar2tracking" />
+
+            <TextView
+                android:id="@+id/txt_isitglbongkar2tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="xx-xxx-xxx"
+                android:textColor="#96979B"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2tglbongkar2tracking"
+                app:layout_constraintStart_toEndOf="@id/txt_titik2tglbongkar2tracking"
+                app:layout_constraintTop_toTopOf="@id/txt_titik2tglbongkar2tracking" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
