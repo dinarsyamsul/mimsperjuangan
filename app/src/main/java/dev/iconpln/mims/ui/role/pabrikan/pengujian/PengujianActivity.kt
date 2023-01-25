@@ -1,5 +1,6 @@
 package dev.iconpln.mims.ui.role.pabrikan.pengujian
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import dev.iconpln.mims.R
 import dev.iconpln.mims.databinding.ActivityPengujianBinding
+import dev.iconpln.mims.ui.role.pabrikan.DashboardPabrikanActivity
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -26,6 +28,12 @@ class PengujianActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPengujianBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this@PengujianActivity, DashboardPabrikanActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+        }
 
         val kategori = resources.getStringArray(R.array.kategori_pengujian)
         val arrayAdapter = ArrayAdapter(this, R.layout.dropdown_item, kategori)

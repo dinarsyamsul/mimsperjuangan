@@ -130,8 +130,8 @@ class DataAtributMaterialActivity : AppCompatActivity() {
         }
 
         binding.btnBack.setOnClickListener {
-            val intent =
-                Intent(this@DataAtributMaterialActivity, DashboardPabrikanActivity::class.java)
+            val intent = Intent(this@DataAtributMaterialActivity, DashboardPabrikanActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 

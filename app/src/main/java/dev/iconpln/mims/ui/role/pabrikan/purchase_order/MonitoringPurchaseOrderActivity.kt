@@ -1,5 +1,6 @@
 package dev.iconpln.mims.ui.role.pabrikan.purchase_order
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.SearchView
@@ -12,6 +13,7 @@ import dev.iconpln.mims.ListTanggalAdapter
 import dev.iconpln.mims.R
 import dev.iconpln.mims.TanggalFilter
 import dev.iconpln.mims.databinding.ActivityMonitoringPurchaseOrderPabrikanBinding
+import dev.iconpln.mims.ui.role.pabrikan.DashboardPabrikanActivity
 import java.util.*
 
 @AndroidEntryPoint
@@ -28,6 +30,12 @@ class MonitoringPurchaseOrderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMonitoringPurchaseOrderPabrikanBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this@MonitoringPurchaseOrderActivity, DashboardPabrikanActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
 
         val materialDateBuilderStart: MaterialDatePicker.Builder<*> =
             MaterialDatePicker.Builder.datePicker()

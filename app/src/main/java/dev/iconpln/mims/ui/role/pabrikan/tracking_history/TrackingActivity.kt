@@ -15,6 +15,7 @@ import dev.iconpln.mims.R
 import dev.iconpln.mims.data.remote.response.DataItemHistory
 import dev.iconpln.mims.databinding.ActivityTrackingBinding
 import dev.iconpln.mims.databinding.DataMaterialTrackingBinding
+import dev.iconpln.mims.ui.role.pabrikan.DashboardPabrikanActivity
 import dev.iconpln.mims.ui.role.pabrikan.DetailMonitoring.Companion.EXTRA_SN
 import dev.iconpln.mims.ui.scan.CustomScanActivity
 import dev.iconpln.mims.utils.MemuatData
@@ -30,6 +31,12 @@ class TrackingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTrackingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this@TrackingActivity, DashboardPabrikanActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
 
         rvAdapter = ListHistoryTrackingAdapter()
 
