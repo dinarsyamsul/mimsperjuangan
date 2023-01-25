@@ -74,4 +74,17 @@ interface ApiService {
         @Query("page_in") pageIn: Int? = 1,
         @Query("page_size") pageSize: Int? = 20
     ): Response<MaterialResponse>
+
+    @Headers("Content-Type:application/json")
+    @GET("/mims-service-api/historymaterial/getAllMaterial")
+    suspend fun getHistoryTracking(
+        @Query("page_in") pageIn: Int? = 1,
+        @Query("page_size") pageSize: Int? = 20
+    ): Response<HistoryTrackingResponse>
+
+    @Headers("Content-Type:application/json")
+    @GET("/mims-service-api/historymaterial/getMaterial/{sn}")
+    suspend fun getSnScanHistory(
+        @Path("sn") sn: String
+    ): Response<HasilScanTrackingResponse>
 }

@@ -15,6 +15,7 @@ import dev.iconpln.mims.databinding.FragmentHomeBinding
 import dev.iconpln.mims.ui.login.LoginActivity
 import dev.iconpln.mims.ui.role.pabrikan.arttribute_material.DataAtributMaterialActivity
 import dev.iconpln.mims.ui.role.pabrikan.purchase_order.MonitoringPurchaseOrderActivity
+import dev.iconpln.mims.ui.role.pabrikan.tracking_history.TrackingActivity
 import dev.iconpln.mims.utils.SessionManager
 import kotlinx.coroutines.launch
 
@@ -48,6 +49,11 @@ class HomeFragment : Fragment() {
 
         binding.card2.setOnClickListener {
             val intent = Intent(context, PengujianActivity::class.java)
+            context?.startActivity(intent)
+        }
+
+        binding.card5.setOnClickListener {
+            val intent = Intent(context, TrackingActivity::class.java)
             context?.startActivity(intent)
         }
 
