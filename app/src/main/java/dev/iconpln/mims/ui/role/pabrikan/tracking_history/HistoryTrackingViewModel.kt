@@ -4,10 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dev.iconpln.mims.data.remote.response.DetailSN
-import dev.iconpln.mims.data.remote.response.HasilScanTrackingResponse
-import dev.iconpln.mims.data.remote.response.HistoryTrackingResponse
-import dev.iconpln.mims.data.remote.response.MonitoringPOResponse
+import dev.iconpln.mims.data.remote.response.*
 import dev.iconpln.mims.data.remote.service.ApiService
 import kotlinx.coroutines.*
 import org.json.JSONObject
@@ -32,6 +29,9 @@ class HistoryTrackingViewModel @Inject constructor (private val apiService: ApiS
 
     private val _scanTrackingHistory = MutableLiveData<HasilScanTrackingResponse>()
     val scanTrackingHistory: LiveData<HasilScanTrackingResponse> = _scanTrackingHistory
+
+    private val _detailHistoryTracking = MutableLiveData<DetailHistoryTrackingResponse>()
+    val detailHistoryTracking : LiveData<DetailHistoryTrackingResponse> = _detailHistoryTracking
 
     fun getHistoryTracking(pageIn: Int? = 1, pageSize: Int? = 5) {
         _isLoading.value = true
@@ -62,6 +62,25 @@ class HistoryTrackingViewModel @Inject constructor (private val apiService: ApiS
                     _isLoading.value = false
                     val dataResult = response.body()
                     _scanTrackingHistory.postValue(dataResult)
+                } else {
+                    _isLoading.value = false
+                    val error = response.errorBody()?.toString()
+                    onError("Error : ${error?.let { getErrorMessage(it) }}")
+                }
+            }
+        }
+    }
+
+    fun getDetailHistoryTracking(sn: String) {
+        _isLoading.value = true
+        job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
+            val response = apiService.getDetailHistoryTracking(sn)
+
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    _isLoading.value = false
+                    val dataResult = response.body()
+                    _detailHistoryTracking.postValue(dataResult)
                 } else {
                     _isLoading.value = false
                     val error = response.errorBody()?.toString()

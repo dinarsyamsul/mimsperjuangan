@@ -12,6 +12,7 @@ import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
 import dagger.hilt.android.AndroidEntryPoint
 import dev.iconpln.mims.R
+import dev.iconpln.mims.data.remote.response.DataItemDetailHistoryTracking
 import dev.iconpln.mims.data.remote.response.DataItemHistory
 import dev.iconpln.mims.databinding.ActivityTrackingBinding
 import dev.iconpln.mims.databinding.DataMaterialTrackingBinding
@@ -63,6 +64,7 @@ class TrackingActivity : AppCompatActivity() {
             override fun onItemClicked(data: DataItemHistory) {
                 val toDetailHistory =
                     Intent(this@TrackingActivity, DataDetailTrackingActivity::class.java)
+                toDetailHistory.putExtra(DataDetailTrackingActivity.EXTRA_SN, data.serialNumber)
                 startActivity(toDetailHistory)
             }
         })

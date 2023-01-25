@@ -97,4 +97,10 @@ interface ApiService {
         @Query("page_in") pageIn: Int? = 1,
         @Query("page_size") pageSize: Int? = 20
     ): Response<PengujianPusertifResponse>
+
+    @Headers("Content-Type:application/json")
+    @GET("/mims-service-api/historymaterial/getHistoryMaterialBySerialNumber/{sn}")
+    suspend fun getDetailHistoryTracking(
+        @Path("sn") sn: String
+    ): Response<DetailHistoryTrackingResponse>
 }
