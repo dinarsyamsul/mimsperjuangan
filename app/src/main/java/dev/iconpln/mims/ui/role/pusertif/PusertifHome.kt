@@ -15,7 +15,7 @@ import dev.iconpln.mims.utils.SessionManager
 import kotlinx.coroutines.launch
 
 
-class pusertifHome : Fragment() {
+class PusertifHome : Fragment() {
 
     private var _binding: FragmentPusertifHomeBinding? = null
     private val binding get() = _binding!!

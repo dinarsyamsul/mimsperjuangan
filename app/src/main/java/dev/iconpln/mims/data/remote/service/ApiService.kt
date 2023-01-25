@@ -87,4 +87,14 @@ interface ApiService {
     suspend fun getSnScanHistory(
         @Path("sn") sn: String
     ): Response<HasilScanTrackingResponse>
+
+    @Headers("Content-Type:application/json")
+    @GET("/mims-service-api/pengujianPusertif/getPengujian")
+    suspend fun getPengujianPusertif(
+        @Query("no_pengujian") noPengujian: String?,
+        @Query("vendor") vendor: String?,
+        @Query("filter") filter: String?,
+        @Query("page_in") pageIn: Int? = 1,
+        @Query("page_size") pageSize: Int? = 20
+    ): Response<PengujianPusertifResponse>
 }
