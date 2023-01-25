@@ -28,6 +28,10 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
         binding = ActivityDetailDataAtributeMaterialBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         rvAdapter = ListDetailMaterialAdapter()
 
         binding.apply {

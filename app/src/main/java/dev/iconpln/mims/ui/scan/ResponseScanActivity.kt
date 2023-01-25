@@ -22,6 +22,10 @@ class ResponseScanActivity : AppCompatActivity() {
         binding = ActivityResponseScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         val data = intent.extras
         if (data != null) {
             binding.tvResult.text = data.getString(EXTRA_SN)
@@ -33,11 +37,11 @@ class ResponseScanActivity : AppCompatActivity() {
             viewModel.getDetailBySN(sn)
         }
 
-        binding.btnsimpan.setOnClickListener {
-            val intent = Intent(this@ResponseScanActivity, DetailDataAtributeMaterialActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
+//        binding.btnsimpan.setOnClickListener {
+//            val intent = Intent(this@ResponseScanActivity, DetailDataAtributeMaterialActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            startActivity(intent)
+//        }
 
         viewModel.snResponse.observe(this) { data ->
             if (data.message == "Success") {

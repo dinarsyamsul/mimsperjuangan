@@ -364,25 +364,25 @@
             <!--            android:gravity="bottom"-->
             <!--            android:orientation="vertical">-->
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnsimpan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/custombtn"
-                android:text="Kembali"
-                android:textAllCaps="false"
-                android:textColor="#FFFBF6"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/btnsimpan"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:layout_marginBottom="24dp"-->
+<!--                android:background="@drawable/custombtn"-->
+<!--                android:text="Kembali"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="#FFFBF6"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
         </LinearLayout>
     </ScrollView>
-
+</androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--    <TextView-->
     <!--        android:id="@+id/title"-->
@@ -724,4 +724,3 @@
     <!--        app:layout_constraintTop_toTopOf="@id/nomerPackaging_holder" />-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
