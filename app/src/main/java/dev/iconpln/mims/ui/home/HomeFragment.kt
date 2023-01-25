@@ -60,19 +60,7 @@ class HomeFragment : Fragment() {
         val session = SessionManager(requireContext())
 
         binding.btnLogout.setOnClickListener {
-            val onLogout = Intent(requireContext(), LoginActivity::class.java)
-            onLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            onLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-
-            lifecycleScope.launch {
-                session.clearUserToken()
-            }
-            session.user_token.asLiveData().observe(viewLifecycleOwner) {
-                Log.d("MainActivity", "cek token : $it")
-            }
-            onLogout.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(onLogout)
-            activity?.finish()
+           showLogoutDialog()
         }
 
         binding.card3.setOnClickListener {
@@ -84,5 +72,37 @@ class HomeFragment : Fragment() {
 //        }
     }
 
+    private fun showLogoutDialog() {
+        val dialogTitle = "Yakin?"
+        val dialogMessage = "Apakah anda yakin akan melakukan logout?"
+
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        with(alertDialogBuilder) {
+            setTitle(dialogTitle)
+            setMessage(dialogMessage)
+            setCancelable(false)
+            setPositiveButton("Ya") { _, _ ->
+                val onLogout = Intent(requireContext(), dev.iconpln.mims.ui.login.LoginActivity::class.java)
+                onLogout.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                onLogout.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
+                lifecycleScope.launch {
+                    session.clearUserToken()
+                }
+                session.user_token.asLiveData().observe(viewLifecycleOwner) {
+                    android.util.Log.d("MainActivity", "cek token : $it")
+                }
+                onLogout.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(onLogout)
+                activity?.finish()
+            }
+            setNegativeButton("Tidak") { dialog, _ ->
+                dialog.cancel()
+            }
+        }
+
+        val alertDialog = alertDialogBuilder.create()
+        return alertDialog.show()
+    }
 
 }
