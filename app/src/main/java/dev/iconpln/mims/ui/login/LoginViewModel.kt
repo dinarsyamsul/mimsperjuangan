@@ -74,7 +74,9 @@ class LoginViewModel @Inject constructor(
                             session.saveAuthToken(
                                 it.userToken,
                                 it.deviceToken,
-                                it.roleId
+                                it.roleId,
+                                it.userName,
+                                it.firstName
                             )
                         }
                     }
@@ -145,7 +147,9 @@ class LoginViewModel @Inject constructor(
                         session.saveAuthToken(
                             user_token = it.userToken,
                             device_token = it.deviceToken,
-                            role_id = it.roleId
+                            role_id = it.roleId,
+                            user_name = it.userName,
+                            nama_cabang = it.firstName
                         )
                     }
                 } else {

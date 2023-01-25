@@ -32,11 +32,23 @@ class SessionManager @Inject constructor(
             pref[ROLE_ID]
         }
 
-    suspend fun saveAuthToken(user_token: String, device_token: String, role_id: String) {
+    val user_name: Flow<String?>
+        get() = context.dataStore.data.map { pref ->
+            pref[USER_NAME]
+        }
+
+    val nama_cabang: Flow<String?>
+        get() = context.dataStore.data.map { pref ->
+            pref[NAMA_CABANG]
+        }
+
+    suspend fun saveAuthToken(user_token: String, device_token: String, role_id: String, user_name: String, nama_cabang: String) {
         context.dataStore.edit { pref ->
             pref[USER_TOKEN] = user_token
             pref[DEVICE_TOKEN] = device_token
             pref[ROLE_ID] = role_id
+            pref[USER_NAME] = user_name
+            pref[NAMA_CABANG] =
         }
     }
 
@@ -44,6 +56,8 @@ class SessionManager @Inject constructor(
         context.dataStore.edit { pref ->
             pref.remove(USER_TOKEN)
             pref.remove(ROLE_ID)
+            pref.remove(USER_NAME)
+            pref.remove(NAMA_CABANG)
 //            pref.remove(DEVICE_TOKEN)
         }
     }
@@ -52,5 +66,7 @@ class SessionManager @Inject constructor(
         private val USER_TOKEN = stringPreferencesKey("user_token")
         private val DEVICE_TOKEN = stringPreferencesKey("device_token")
         private val ROLE_ID = stringPreferencesKey("role_id")
+        private val USER_NAME = stringPreferencesKey("user_name")
+        private val NAMA_CABANG = stringPreferencesKey("nama_cabang")
     }
 }

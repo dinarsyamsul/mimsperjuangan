@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.asLiveData
 import dev.iconpln.mims.databinding.FragmentProfileBinding
+import dev.iconpln.mims.utils.SessionManager
 
 class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var muncul = false
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+    private lateinit var session: SessionManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,37 +27,18 @@ class ProfileFragment : Fragment() {
 
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        binding.img1.setOnClickListener{
-//            if (muncul == true){
-//                binding.img1.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_baseline_keyboard_arrow_up_24))
-//                binding.const2.visibility = View.VISIBLE
-//                muncul = !muncul
-//
-//            } else {
-//                binding.img1.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_baseline_keyboard_arrow_down_24))
-//                binding.const2.visibility = View.GONE
-//                muncul = !muncul
-//            }
-//        }
-//
-//        binding.btn1.setOnClickListener {
-//            val  dialogBinding = layoutInflater.inflate(R.layout.activity_popdialog, null)
-//
-//            val myDialog = Dialog(requireContext())
-//            myDialog.setContentView(dialogBinding)
-//
-//            myDialog.setCancelable(true)
-//            myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-//            myDialog.show()
-//        }
-//    }
-//
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        _binding = null
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        session = SessionManager(requireContext())
+
+        session.user_name.asLiveData().observe(viewLifecycleOwner){
+            binding.tvNamaUser.text = it
+        }
+
+        session.nama_cabang.asLiveData().observe(viewLifecycleOwner){
+            binding.tvNamaCabang.text = it
+        }
+    }
 
 }
