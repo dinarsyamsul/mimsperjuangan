@@ -75,9 +75,9 @@
         android:text="Nama Cabang"
         android:fontFamily="@font/montserrat_reguler"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toTopOf="@id/tv_namaPabrikan"
-        app:layout_constraintStart_toStartOf="@id/tv_namaPabrikan"
-        app:layout_constraintEnd_toEndOf="@id/tv_namaPabrikan"/>
+        app:layout_constraintTop_toTopOf="@id/tv_nama_user"
+        app:layout_constraintStart_toStartOf="@id/tv_nama_user"
+        app:layout_constraintEnd_toEndOf="@id/tv_nama_user"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"

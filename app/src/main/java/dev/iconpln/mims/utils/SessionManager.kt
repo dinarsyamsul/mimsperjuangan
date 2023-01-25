@@ -48,7 +48,7 @@ class SessionManager @Inject constructor(
             pref[DEVICE_TOKEN] = device_token
             pref[ROLE_ID] = role_id
             pref[USER_NAME] = user_name
-            pref[NAMA_CABANG] =
+            pref[NAMA_CABANG] = nama_cabang
         }
     }
 
