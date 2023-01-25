@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
@@ -23,6 +24,7 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var session: SessionManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,7 +59,7 @@ class HomeFragment : Fragment() {
             context?.startActivity(intent)
         }
 
-        val session = SessionManager(requireContext())
+         session = SessionManager(requireContext())
 
         binding.btnLogout.setOnClickListener {
            showLogoutDialog()
@@ -76,7 +78,7 @@ class HomeFragment : Fragment() {
         val dialogTitle = "Yakin?"
         val dialogMessage = "Apakah anda yakin akan melakukan logout?"
 
-        val alertDialogBuilder = AlertDialog.Builder(this)
+        val alertDialogBuilder = AlertDialog.Builder(requireContext())
         with(alertDialogBuilder) {
             setTitle(dialogTitle)
             setMessage(dialogMessage)
