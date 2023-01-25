@@ -8,7 +8,7 @@ data class PengujianPusertifResponse(
 	val totalRow: Int,
 
 	@field:SerializedName("data")
-	val data: List<DataItem>,
+	val data: List<DataItemPusertif>,
 
 	@field:SerializedName("timestamp")
 	val timestamp: String,
@@ -17,7 +17,7 @@ data class PengujianPusertifResponse(
 	val status: Int
 )
 
-data class DataItem(
+data class DataItemPusertif(
 
 	@field:SerializedName("qty_tdk_lolos")
 	val qtyTdkLolos: String,
