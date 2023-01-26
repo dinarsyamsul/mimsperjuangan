@@ -1,13 +1,12 @@
 package dev.iconpln.mims.ui.role.pabrikan.arttribute_material
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import dev.iconpln.mims.data.remote.response.DataItemMaterial
@@ -36,7 +35,8 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
         rvAdapter = ListDetailMaterialAdapter()
 
         binding.apply {
-            rvDetailMaterial.layoutManager = LinearLayoutManager(this@DetailDataAtributeMaterialActivity)
+            rvDetailMaterial.layoutManager =
+                LinearLayoutManager(this@DetailDataAtributeMaterialActivity)
             rvDetailMaterial.adapter = rvAdapter
         }
 
@@ -47,32 +47,33 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
 
         val noMaterial = data?.getString(EXTRA_SN)
         if (noMaterial != null) {
-            materialViewModel.getDetailMaterial("",noMaterial,serialNumber)
+            materialViewModel.getDetailMaterial("", noMaterial, serialNumber)
         }
 
-        materialViewModel.detailMaterialResponse.observe(this){
+        materialViewModel.detailMaterialResponse.observe(this) {
             rvAdapter.setData(it.data)
         }
 
-        materialViewModel.errorMessage.observe(this){
-            if (it != null){
+        materialViewModel.errorMessage.observe(this) {
+            if (it != null) {
                 rvAdapter.setData(listOf())
             }
         }
 
-        binding.srcDetaildataatributematerial.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        binding.srcDetaildataatributematerial.setOnQueryTextListener(object :
+            SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                if (query != null){
+                if (query != null) {
                     serialNumber = query.uppercase(Locale.ROOT)
-                    materialViewModel.getDetailMaterial("","", serialNumber)
+                    materialViewModel.getDetailMaterial("", "", serialNumber)
                 }
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                if (newText != null){
+                if (newText != null) {
                     serialNumber = newText.uppercase(Locale.ROOT)
-                    materialViewModel.getDetailMaterial("","", serialNumber)
+                    materialViewModel.getDetailMaterial("", "", serialNumber)
                 }
                 return false
             }
@@ -97,7 +98,10 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
         rvAdapter.setOnItemClickCallback(object : ListDetailMaterialAdapter.OnItemClickCallback {
             override fun onItemClicked(data: DataItemMaterial) {
                 val toDetailMaterial =
-                    Intent(this@DetailDataAtributeMaterialActivity, ResponseScanActivity::class.java)
+                    Intent(
+                        this@DetailDataAtributeMaterialActivity,
+                        ResponseScanActivity::class.java
+                    )
                 toDetailMaterial.putExtra(ResponseScanActivity.EXTRA_SN, data.serialNumber)
                 startActivity(toDetailMaterial)
             }

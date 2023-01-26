@@ -1,16 +1,12 @@
 package dev.iconpln.mims.ui.role.pabrikan.tracking_history
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
-import dev.iconpln.mims.R
-import dev.iconpln.mims.data.remote.response.DataItemDetailHistoryTracking
-import dev.iconpln.mims.data.remote.response.DataItemHistory
 import dev.iconpln.mims.databinding.ActivityDataDetailTrackingBinding
 
 @AndroidEntryPoint
@@ -28,31 +24,32 @@ class DataDetailTrackingActivity : AppCompatActivity() {
         rvAdapter = ListDetailHistoryTrackingAdapter()
 
         binding.apply {
-            rvDetailDataHistoryTracking.layoutManager = LinearLayoutManager(this@DataDetailTrackingActivity)
+            rvDetailDataHistoryTracking.layoutManager =
+                LinearLayoutManager(this@DataDetailTrackingActivity)
             rvDetailDataHistoryTracking.adapter = rvAdapter
         }
 
         val data = intent.extras
-        if (data != null){
-            Log.d("DataDetailHistory","cek kiriman data : $data")
+        if (data != null) {
+            Log.d("DataDetailHistory", "cek kiriman data : $data")
         }
 
         val noSerial = data?.getString(EXTRA_SN)
-        if (noSerial != null){
+        if (noSerial != null) {
             detailHistoryTrackingModel.getDetailHistoryTracking(noSerial)
         }
 
-        detailHistoryTrackingModel.detailHistoryTracking.observe(this){
+        detailHistoryTrackingModel.detailHistoryTracking.observe(this) {
             rvAdapter.setData(it.data)
         }
 
-        detailHistoryTrackingModel.errorMessage.observe(this){
-            if (it != null){
+        detailHistoryTrackingModel.errorMessage.observe(this) {
+            if (it != null) {
                 rvAdapter.setData(listOf())
             }
         }
 
-        detailHistoryTrackingModel.isLoading.observe(this){
+        detailHistoryTrackingModel.isLoading.observe(this) {
             if (it == true) {
                 binding.progressBar.visibility = View.VISIBLE
             } else {

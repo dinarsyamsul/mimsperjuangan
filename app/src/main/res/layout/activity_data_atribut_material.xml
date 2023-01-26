@@ -213,18 +213,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
                     android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:padding="5dp">
 
                     <LinearLayout
                         android:id="@+id/ly_cal_start"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:background="#FFFFFF"
                         android:gravity="center"
-                        android:layout_weight="1"
                         android:padding="5dp">
 
                         <TextView
@@ -244,18 +244,18 @@
 
                     </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="s/d" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="s/d" />
 
                     <LinearLayout
                         android:id="@+id/ly_cal_end"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:background="#FFFFFF"
                         android:gravity="center"
-                        android:layout_weight="1"
                         android:padding="5dp">
 
                         <TextView

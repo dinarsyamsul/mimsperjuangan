@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp">
@@ -17,383 +16,383 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FFFFFF"
-                    android:padding="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp">
 
-                    <View
-                        android:id="@+id/vw_line"
-                        android:layout_width="4dp"
-                        android:layout_height="520dp"
-                        android:background="@drawable/dashboard"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/vw_line"
+                android:layout_width="4dp"
+                android:layout_height="520dp"
+                android:background="@drawable/dashboard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_serialNumber"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_serialNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_serialNumber"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Serial Number"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_serialNumber"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_serialNumber"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_serialNumber" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_serialNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Serial Number"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_serialNumber"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_serialNumber"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_serialNumber" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_serialNumber"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:textColor="#313132"
-                        android:text="PLN0219000022402214000000002"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_serialNumber"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_serialNumber" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_serialNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="PLN0219000022402214000000002"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_serialNumber"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_serialNumber" />
 
-                    <!-- PEMBATAS -->
+            <!-- PEMBATAS -->
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_keteranganHistory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_serialNumber" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_keteranganHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_serialNumber" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_keteranganHistory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Kategori History"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_keteranganHistory"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_keteranganHistory"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_keteranganHistory" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_keteranganHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Kategori History"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_keteranganHistory"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_keteranganHistory"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_keteranganHistory" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_keteranganHistory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:textColor="#313132"
-                        android:text="UPLOAD DATA AWAL PABRIKAN"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_keteranganHistory"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_keteranganHistory" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_keteranganHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="UPLOAD DATA AWAL PABRIKAN"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_keteranganHistory"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_keteranganHistory" />
 
-                    <!--PEMBATAS-->
+            <!--PEMBATAS-->
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_keteranganHistory" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_keteranganHistory" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Status"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_status"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_status"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_status" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_status"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_status"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_status" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="100"
-                        android:textColor="#313132"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_status"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_status" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="100"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_status"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_status" />
 
-                    <View
-                        android:id="@+id/vw_line1"
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="#717171"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_isi_dtl_trck_status" />
+            <View
+                android:id="@+id/vw_line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#717171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_isi_dtl_trck_status" />
 
-                    <!--PEMBATAS GARIS-->
+            <!--PEMBATAS GARIS-->
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/vw_line1" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/vw_line1" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Date"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_date"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_date"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_date" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_date"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_date"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_date" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="2023-01-24 00:14:49.227012"
-                        android:textColor="#313132"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_date"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_date" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="2023-01-24 00:14:49.227012"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_date" />
 
-                    <!--Pembatas-->
+            <!--Pembatas-->
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_nomorTransaksi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_date" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_nomorTransaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_date" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_nomorTransaksi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Nomor Transaksi"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_nomorTransaksi"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_nomorTransaksi"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_nomorTransaksi" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_nomorTransaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Nomor Transaksi"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_nomorTransaksi"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_nomorTransaksi"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_nomorTransaksi" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_nomorTransaksi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="UPL1674518400"
-                        android:textColor="#313132"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_nomorTransaksi"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_nomorTransaksi" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_nomorTransaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="UPL1674518400"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_nomorTransaksi"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_nomorTransaksi" />
 
-                    <!--Pembatas-->
+            <!--Pembatas-->
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_plant"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_nomorTransaksi" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_plant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_nomorTransaksi" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_plant"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Plant"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_plant"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_plant"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_plant" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_plant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Plant"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_plant"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_plant"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_plant" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_plant"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="123123"
-                        android:textColor="#313132"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_plant"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_plant" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_plant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="123123"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_plant"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_plant" />
 
-                    <View
-                        android:id="@+id/vw_line2"
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="#717171"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_isi_dtl_trck_plant" />
+            <View
+                android:id="@+id/vw_line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#717171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_isi_dtl_trck_plant" />
 
-                    <!--Pembatas Garis-->
+            <!--Pembatas Garis-->
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_storLok"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/vw_line2" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_storLok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/vw_line2" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_storLok"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Stor Lok"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_storLok"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_storLok"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_storLok" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_storLok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Stor Lok"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_storLok"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_storLok"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_storLok" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_storLok"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="123123"
-                        android:textColor="#313132"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_storLok"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_storLok" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_storLok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="123123"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_storLok"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_storLok" />
 
-                    <!--Pembatas-->
-
-
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_materialGroup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_storLok" />
-
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_materialGroup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="Material Group"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_materialGroup"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_materialGroup"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_materialGroup" />
-
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_materialGroup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="123123"
-                        android:textColor="#313132"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_materialGroup"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_materialGroup" />
-
-                    <!--Pembatas-->
+            <!--Pembatas-->
 
 
-                    <ImageView
-                        android:id="@+id/img_dtl_trck_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/plant_list_monitoring1"
-                        app:layout_constraintStart_toStartOf="@+id/vw_line"
-                        app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_materialGroup" />
+            <ImageView
+                android:id="@+id/img_dtl_trck_materialGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_storLok" />
 
-                    <TextView
-                        android:id="@+id/tv_dtl_trck_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="ID"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_id"
-                        app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_id"
-                        app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_id" />
+            <TextView
+                android:id="@+id/tv_dtl_trck_materialGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="Material Group"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_materialGroup"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_materialGroup"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_materialGroup" />
 
-                    <TextView
-                        android:id="@+id/tv_isi_dtl_trck_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_reguler"
-                        android:text="123123"
-                        android:textColor="#313132"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_id"
-                        app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_id"
-                        />
-                    <View
-                        android:id="@+id/vw_lin5"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:background="@drawable/dashboard"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_isi_dtl_trck_id" />
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_materialGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="123123"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_materialGroup"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_materialGroup" />
+
+            <!--Pembatas-->
+
+
+            <ImageView
+                android:id="@+id/img_dtl_trck_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plant_list_monitoring1"
+                app:layout_constraintStart_toStartOf="@+id/vw_line"
+                app:layout_constraintTop_toBottomOf="@id/img_dtl_trck_materialGroup" />
+
+            <TextView
+                android:id="@+id/tv_dtl_trck_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="ID"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dtl_trck_id"
+                app:layout_constraintStart_toEndOf="@+id/img_dtl_trck_id"
+                app:layout_constraintTop_toTopOf="@+id/img_dtl_trck_id" />
+
+            <TextView
+                android:id="@+id/tv_isi_dtl_trck_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_reguler"
+                android:text="123123"
+                android:textColor="#313132"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dtl_trck_id"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtl_trck_id" />
+
+            <View
+                android:id="@+id/vw_lin5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/dashboard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_isi_dtl_trck_id" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

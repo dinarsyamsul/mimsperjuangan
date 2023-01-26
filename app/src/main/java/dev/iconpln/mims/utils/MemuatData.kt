@@ -7,10 +7,10 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
-import dev.iconpln.mims.ui.role.pabrikan.tracking_history.HasilTrackingScanActivity
-import dev.iconpln.mims.ui.scan.HasilScan
 import dev.iconpln.mims.R
+import dev.iconpln.mims.ui.role.pabrikan.tracking_history.HasilTrackingScanActivity
 import dev.iconpln.mims.ui.role.pabrikan.tracking_history.HistoryTrackingViewModel
+import dev.iconpln.mims.ui.scan.HasilScan
 import dev.iconpln.mims.ui.scan.ScanViewModel
 
 @AndroidEntryPoint

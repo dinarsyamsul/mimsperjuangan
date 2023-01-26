@@ -63,7 +63,8 @@ ListMaterialAdapter() : RecyclerView.Adapter<ListMaterialAdapter.ListViewHolder>
     }
 }
 
-class ListDetailMaterialAdapter() : RecyclerView.Adapter<ListDetailMaterialAdapter.ListViewHolder>() {
+class ListDetailMaterialAdapter() :
+    RecyclerView.Adapter<ListDetailMaterialAdapter.ListViewHolder>() {
 
     private val listMaterial = ArrayList<DataItemMaterial>()
     private var onItemClickCallback: OnItemClickCallback? = null

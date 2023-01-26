@@ -14,9 +14,7 @@ import dev.iconpln.mims.R
 import dev.iconpln.mims.TanggalFilter
 import dev.iconpln.mims.data.remote.response.DataItemMaterial
 import dev.iconpln.mims.databinding.ActivityDataAtributMaterialBinding
-import dev.iconpln.mims.ui.role.pabrikan.DashboardPabrikanActivity
 import java.util.*
-import kotlin.collections.ArrayList
 
 @AndroidEntryPoint
 class DataAtributMaterialActivity : AppCompatActivity() {
@@ -80,23 +78,23 @@ class DataAtributMaterialActivity : AppCompatActivity() {
             rvSerial.adapter = rvAdapter
         }
 
-        materialViewModel.getAllMaterial(kategori,tahun,snOrNoProd)
+        materialViewModel.getAllMaterial(kategori, tahun, snOrNoProd)
 
         materialViewModel.materialResponse.observe(this) {
             rvAdapter.setData(it.data)
             binding.txtJumlahData.text = "${it.data.size} Data"
         }
 
-        materialViewModel.errorMessage.observe(this){
-            if (it != null){
+        materialViewModel.errorMessage.observe(this) {
+            if (it != null) {
                 rvAdapter.setData(listOf())
                 binding.txtJumlahData.text = "Tidak ada data"
             }
         }
 
-        binding.srcNomorBatch.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        binding.srcNomorBatch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                if (query != null){
+                if (query != null) {
                     val mQuery = query.uppercase(Locale.ROOT)
                     snOrNoProd = mQuery
                     materialViewModel.getAllMaterial(kategori, tahun, snOrNoProd)
@@ -105,7 +103,7 @@ class DataAtributMaterialActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                if (newText != null){
+                if (newText != null) {
                     snOrNoProd = newText.uppercase(Locale.ROOT)
                     materialViewModel.getAllMaterial(kategori, tahun, snOrNoProd)
                 }
@@ -119,7 +117,7 @@ class DataAtributMaterialActivity : AppCompatActivity() {
 
         binding.dropdownKategori.setOnItemClickListener { _, _, _, _ ->
             val isiData = binding.dropdownKategori.text.toString()
-            when(isiData){
+            when (isiData) {
                 "kWh Meter" -> kategori = "0219"
                 "Trafo Distribusi" -> kategori = "0103"
                 "Mini Circuit Breaker" -> kategori = "0325"
@@ -131,7 +129,7 @@ class DataAtributMaterialActivity : AppCompatActivity() {
 
         binding.dropdownTahun.setOnItemClickListener { _, _, _, _ ->
             tahun = binding.dropdownTahun.text.toString()
-            if (tahun == "Semua"){
+            if (tahun == "Semua") {
                 tahun = ""
             }
             materialViewModel.getAllMaterial(kategori, tahun, snOrNoProd)
@@ -156,17 +154,23 @@ class DataAtributMaterialActivity : AppCompatActivity() {
         rvAdapter.setOnItemClickCallback(object : ListMaterialAdapter.OnItemClickCallback {
             override fun onItemClicked(data: DataItemMaterial) {
                 val toDetailMaterial =
-                    Intent(this@DataAtributMaterialActivity, DetailDataAtributeMaterialActivity::class.java)
-                toDetailMaterial.putExtra(DetailDataAtributeMaterialActivity.EXTRA_SN, data.nomorMaterial)
+                    Intent(
+                        this@DataAtributMaterialActivity,
+                        DetailDataAtributeMaterialActivity::class.java
+                    )
+                toDetailMaterial.putExtra(
+                    DetailDataAtributeMaterialActivity.EXTRA_SN,
+                    data.nomorMaterial
+                )
                 startActivity(toDetailMaterial)
             }
         })
     }
 
-    private fun getListTanggal(): ArrayList<TanggalFilter>{
+    private fun getListTanggal(): ArrayList<TanggalFilter> {
         val tanggalFill = resources.getStringArray(R.array.data_tanggal)
         val listTanggalfil = kotlin.collections.ArrayList<TanggalFilter>()
-        for (i in tanggalFill.indices){
+        for (i in tanggalFill.indices) {
             val tanggal = TanggalFilter(tanggalFill[i])
             listTanggalfil.add(tanggal)
         }

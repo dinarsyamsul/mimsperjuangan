@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.datepicker.MaterialDatePicker
 import dagger.hilt.android.AndroidEntryPoint
-import dev.iconpln.mims.ListTanggalAdapter
 import dev.iconpln.mims.R
 import dev.iconpln.mims.TanggalFilter
 import dev.iconpln.mims.databinding.ActivityMonitoringPurchaseOrderPabrikanBinding
@@ -33,7 +32,8 @@ class MonitoringPurchaseOrderActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnBack.setOnClickListener {
-            val intent = Intent(this@MonitoringPurchaseOrderActivity, DashboardPabrikanActivity::class.java)
+            val intent =
+                Intent(this@MonitoringPurchaseOrderActivity, DashboardPabrikanActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
@@ -87,8 +87,8 @@ class MonitoringPurchaseOrderActivity : AppCompatActivity() {
             rvAdapter.setData(it.data)
         }
 
-        monitoringPOViewModel.errorMessage.observe(this){
-            if (it != null){
+        monitoringPOViewModel.errorMessage.observe(this) {
+            if (it != null) {
                 rvAdapter.setData(listOf())
             }
         }
@@ -121,7 +121,7 @@ class MonitoringPurchaseOrderActivity : AppCompatActivity() {
             monitoringPOViewModel.getMonitoringPO(noPO, urut)
         }
 
-        monitoringPOViewModel.isLoading.observe(this){
+        monitoringPOViewModel.isLoading.observe(this) {
             if (it == true) {
                 binding.progressBar.visibility = View.VISIBLE
             } else {

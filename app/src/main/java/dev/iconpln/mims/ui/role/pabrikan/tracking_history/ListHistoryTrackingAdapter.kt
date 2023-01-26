@@ -9,7 +9,8 @@ import dev.iconpln.mims.data.remote.response.DataItemHistory
 import dev.iconpln.mims.databinding.ItemDataTrackingBinding
 import dev.iconpln.mims.databinding.ItemDetailTrackingBinding
 
-class ListHistoryTrackingAdapter(): RecyclerView.Adapter<ListHistoryTrackingAdapter.ListViewHolder>() {
+class ListHistoryTrackingAdapter() :
+    RecyclerView.Adapter<ListHistoryTrackingAdapter.ListViewHolder>() {
 
     private val listHistoryTracking = ArrayList<DataItemHistory>()
     private var onItemClickCallback: OnItemClickCallBack? = null
@@ -22,7 +23,7 @@ class ListHistoryTrackingAdapter(): RecyclerView.Adapter<ListHistoryTrackingAdap
         diffResult.dispatchUpdatesTo(this)
     }
 
-    fun setOnItemClickCallBack(onItemClickCallback: OnItemClickCallBack){
+    fun setOnItemClickCallBack(onItemClickCallback: OnItemClickCallBack) {
         this.onItemClickCallback = onItemClickCallback
     }
 
@@ -35,7 +36,7 @@ class ListHistoryTrackingAdapter(): RecyclerView.Adapter<ListHistoryTrackingAdap
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-     holder.bind(listHistoryTracking[position])
+        holder.bind(listHistoryTracking[position])
 
         holder.itemView.setOnClickListener {
             onItemClickCallback?.onItemClicked(listHistoryTracking[holder.bindingAdapterPosition])
@@ -44,9 +45,10 @@ class ListHistoryTrackingAdapter(): RecyclerView.Adapter<ListHistoryTrackingAdap
 
     override fun getItemCount(): Int = listHistoryTracking.size
 
-    class ListViewHolder(val itemBinding: ItemDataTrackingBinding): RecyclerView.ViewHolder(itemBinding.root) {
-        fun bind(item: DataItemHistory){
-            with(itemBinding){
+    class ListViewHolder(val itemBinding: ItemDataTrackingBinding) :
+        RecyclerView.ViewHolder(itemBinding.root) {
+        fun bind(item: DataItemHistory) {
+            with(itemBinding) {
                 txtSerialNumber.text = item.serialNumber
                 txtMaterial.text = item.nomorMaterial
                 txtIsiBatch.text = item.noProduksi
@@ -63,7 +65,8 @@ class ListHistoryTrackingAdapter(): RecyclerView.Adapter<ListHistoryTrackingAdap
     }
 }
 
-class ListDetailHistoryTrackingAdapter(): RecyclerView.Adapter<ListDetailHistoryTrackingAdapter.ListViewHolder>() {
+class ListDetailHistoryTrackingAdapter() :
+    RecyclerView.Adapter<ListDetailHistoryTrackingAdapter.ListViewHolder>() {
 
     private val listDetailHistoryTracking = ArrayList<DataItemDetailHistoryTracking>()
     private var onItemClickCallback: OnItemClickCallBack? = null
@@ -76,7 +79,7 @@ class ListDetailHistoryTrackingAdapter(): RecyclerView.Adapter<ListDetailHistory
         diffResult.dispatchUpdatesTo(this)
     }
 
-    fun setOnItemClickCallBack(onItemClickCallback: OnItemClickCallBack){
+    fun setOnItemClickCallBack(onItemClickCallback: OnItemClickCallBack) {
         this.onItemClickCallback = onItemClickCallback
     }
 
@@ -98,9 +101,10 @@ class ListDetailHistoryTrackingAdapter(): RecyclerView.Adapter<ListDetailHistory
 
     override fun getItemCount(): Int = listDetailHistoryTracking.size
 
-    class ListViewHolder(val itemBinding: ItemDetailTrackingBinding): RecyclerView.ViewHolder(itemBinding.root) {
-        fun bind(item: DataItemDetailHistoryTracking){
-            with(itemBinding){
+    class ListViewHolder(val itemBinding: ItemDetailTrackingBinding) :
+        RecyclerView.ViewHolder(itemBinding.root) {
+        fun bind(item: DataItemDetailHistoryTracking) {
+            with(itemBinding) {
                 tvIsiDtlTrckSerialNumber.text = item.serialNumber
                 tvIsiDtlTrckKeteranganHistory.text = item.keteranganHistory
                 tvIsiDtlTrckStatus.text = item.status

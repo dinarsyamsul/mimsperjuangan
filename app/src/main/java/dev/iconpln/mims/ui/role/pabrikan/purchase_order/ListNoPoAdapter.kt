@@ -41,7 +41,8 @@ class ListNoPoAdapter() : RecyclerView.Adapter<ListNoPoAdapter.ListViewHolder>()
 
     override fun getItemCount(): Int = listMaterial.size
 
-    class ListViewHolder(val itemBinding: ItemDataMonitoringPurchaseBinding): RecyclerView.ViewHolder(itemBinding.root) {
+    class ListViewHolder(val itemBinding: ItemDataMonitoringPurchaseBinding) :
+        RecyclerView.ViewHolder(itemBinding.root) {
 
         fun bind(item: DataMonitoringPO) {
             with(itemBinding) {

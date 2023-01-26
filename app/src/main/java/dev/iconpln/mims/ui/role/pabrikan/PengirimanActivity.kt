@@ -1,7 +1,7 @@
 package dev.iconpln.mims.ui.role.pabrikan
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import dev.iconpln.mims.R
 
 class PengirimanActivity : AppCompatActivity() {

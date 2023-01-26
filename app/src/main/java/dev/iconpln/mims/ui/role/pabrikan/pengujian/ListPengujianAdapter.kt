@@ -1,7 +1,5 @@
 package dev.iconpln.mims.ui.role.pabrikan.pengujian
 
-import android.content.Context
-import android.graphics.Color.green
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.iconpln.mims.R
 import dev.iconpln.mims.data.remote.response.DataItemPengujian
 import dev.iconpln.mims.databinding.ItemPengujianBinding
-import dev.iconpln.mims.ui.role.pabrikan.purchase_order.ListNoPoAdapter
 
 class ListPengujianAdapter() : RecyclerView.Adapter<ListPengujianAdapter.ListViewHolder>() {
 
@@ -60,28 +57,69 @@ class ListPengujianAdapter() : RecyclerView.Adapter<ListPengujianAdapter.ListVie
                 txtIsiJumlah.text = item.qtyMaterial
                 txtIsiSatuan.text = item.unit
                 statusUji.text = item.statusUji
-                when(item.statusUji){
+                when (item.statusUji) {
                     "LOLOS" -> {
-                        statusUji.setBackgroundColor(ContextCompat.getColor(itemView.context,R.color.lolos))
-                        statusUji.setTextColor(ContextCompat.getColor(itemView.context,R.color.lolos_text))
+                        statusUji.setBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.lolos
+                            )
+                        )
+                        statusUji.setTextColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.lolos_text
+                            )
+                        )
                     }
                     "TIDAK LOLOS" -> {
-                        statusUji.setBackgroundColor(ContextCompat.getColor(itemView.context,R.color.tidak_Lolos))
-                        statusUji.setTextColor(ContextCompat.getColor(itemView.context,R.color.tidakLolos_text))
+                        statusUji.setBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.tidak_Lolos
+                            )
+                        )
+                        statusUji.setTextColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.tidakLolos_text
+                            )
+                        )
                     }
                     "SEDANG UJI" -> {
-                        statusUji.setBackgroundColor(ContextCompat.getColor(itemView.context,R.color.sedang_uji))
-                        statusUji.setTextColor(ContextCompat.getColor(itemView.context,R.color.sedangUji_text))
+                        statusUji.setBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.sedang_uji
+                            )
+                        )
+                        statusUji.setTextColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.sedangUji_text
+                            )
+                        )
                     }
                     "BELUM UJI" -> {
-                        statusUji.setBackgroundColor(ContextCompat.getColor(itemView.context,R.color.birumuda))
-                        statusUji.setTextColor(ContextCompat.getColor(itemView.context,R.color.blue_solid))
+                        statusUji.setBackgroundColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.birumuda
+                            )
+                        )
+                        statusUji.setTextColor(
+                            ContextCompat.getColor(
+                                itemView.context,
+                                R.color.blue_solid
+                            )
+                        )
                     }
                 }
                 Log.d("ListPengujianAdapter", "cek di adapter pengujian ${item.tanggalUji}")
             }
         }
     }
+
     interface OnItemClickCallback {
         fun onItemClicked(data: DataItemPengujian)
     }

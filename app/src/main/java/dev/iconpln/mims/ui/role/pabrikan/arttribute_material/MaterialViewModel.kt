@@ -32,7 +32,13 @@ class MaterialViewModel @Inject constructor(private val apiService: ApiService) 
     val detailMaterialResponse: LiveData<MaterialResponse> = _detailMaterialResponse
 
 
-    fun getAllMaterial(kategori: String? = "", tahun: String? = "", filter: String?, pageIn: Int? = 1, pageSize: Int? = 5) {
+    fun getAllMaterial(
+        kategori: String? = "",
+        tahun: String? = "",
+        filter: String?,
+        pageIn: Int? = 1,
+        pageSize: Int? = 100
+    ) {
         _isLoading.value = true
         job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
             val response = apiService.getMaterial(kategori, tahun, filter, pageIn, pageSize)
@@ -52,10 +58,17 @@ class MaterialViewModel @Inject constructor(private val apiService: ApiService) 
         }
     }
 
-    fun getDetailMaterial(noProduksi: String? = "", noMaterial: String? = "", serialNumber: String? = "", pageIn: Int? = 1, pageSize: Int? = 5) {
+    fun getDetailMaterial(
+        noProduksi: String? = "",
+        noMaterial: String? = "",
+        serialNumber: String? = "",
+        pageIn: Int? = 1,
+        pageSize: Int? = 100
+    ) {
         _isLoading.value = true
         job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
-            val response = apiService.getDetailMaterial(noProduksi, noMaterial, serialNumber, pageIn, pageSize)
+            val response =
+                apiService.getDetailMaterial(noProduksi, noMaterial, serialNumber, pageIn, pageSize)
 
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {

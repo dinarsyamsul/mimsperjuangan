@@ -1,15 +1,10 @@
 package dev.iconpln.mims.ui.scan
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
 import dev.iconpln.mims.databinding.ActivityResponseScanBinding
-import dev.iconpln.mims.ui.role.pabrikan.DashboardPabrikanActivity
-import dev.iconpln.mims.ui.role.pabrikan.arttribute_material.DataAtributMaterialActivity
-import dev.iconpln.mims.ui.role.pabrikan.arttribute_material.DetailDataAtributeMaterialActivity
 
 @AndroidEntryPoint
 class ResponseScanActivity : AppCompatActivity() {

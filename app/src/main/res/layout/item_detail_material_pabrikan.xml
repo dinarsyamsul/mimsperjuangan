@@ -34,10 +34,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:textStyle="bold"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No. Batch"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/vw_line"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,15 +78,13 @@
                 android:id="@+id/txt_nomorMaterial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nomor Material"
-                android:textSize="14sp"
-                android:textColor="#313132"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_reguler"
-                app:layout_constraintTop_toBottomOf="@id/txt_serialNumber"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-
+                android:text="Nomor Material"
+                android:textColor="#313132"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_serialNumber" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

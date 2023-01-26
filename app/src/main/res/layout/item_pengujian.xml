@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.role.pabrikan.pengujian.PengujianActivity">
 
     <androidx.cardview.widget.CardView
@@ -36,10 +36,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:textSize="12sp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12 Januari 2022"
                 android:textColor="@color/black"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/vw_line"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,9 +51,9 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="123123123123"
+                android:textColor="#3F3D56"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="#3F3D56"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_tanggalPengujian" />
 
@@ -195,8 +195,8 @@
                 android:id="@+id/txt_isiJumlah"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_reguler"
                 android:layout_marginEnd="32dp"
+                android:fontFamily="@font/montserrat_reguler"
                 android:text="123123"
                 android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2unit"
@@ -258,16 +258,16 @@
                 android:id="@+id/status_uji"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:background="@drawable/bg_monitoring"
-                android:layout_marginTop="24dp"
-                android:text="Lolos"
-                android:textSize="8sp"
-                android:textColor="#01A12D"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/bg_monitoring"
+                android:text="Lolos"
+                android:textColor="#01A12D"
+                android:textSize="8sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_isiSatuan"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_isiSatuan" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

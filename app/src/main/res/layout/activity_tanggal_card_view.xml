@@ -10,45 +10,45 @@
         android:id="@+id/cv_daftarList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
-        android:background="#F0EDFF"
-        android:paddingBottom="10dp"
-        android:padding="10dp"
-        android:orientation="horizontal"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
+        android:background="#F0EDFF"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:paddingBottom="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:background="#FFFFFF"
+            android:padding="10dp"
             tools:ignore="MissingConstraints">
 
             <TextView
                 android:id="@+id/txt_tanggal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12"
+                android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_reguler"
+                android:text="12"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_marginStart="16dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/txt_Hari"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kamis"
                 android:fontFamily="@font/montserrat_reguler"
+                android:text="Kamis"
                 android:textColor="#313132"
-                app:layout_constraintTop_toBottomOf="@+id/txt_tanggal"/>
+                app:layout_constraintTop_toBottomOf="@+id/txt_tanggal" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

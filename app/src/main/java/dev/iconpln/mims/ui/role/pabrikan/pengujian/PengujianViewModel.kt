@@ -27,10 +27,11 @@ class PengujianViewModel @Inject constructor(private val apiService: ApiService)
     private val _pengujianResponse = MutableLiveData<PengujianMaterialPabrikanResponse>()
     val pengujianResponse: LiveData<PengujianMaterialPabrikanResponse> = _pengujianResponse
 
-    fun getPengujian(noPengujian: String?, status: String?, pageIn: Int? = 1, pageSize: Int? = 5) {
+    fun getPengujian(noPengujian: String?, status: String?, pageIn: Int? = 1, pageSize: Int? = 100) {
         _isLoading.value = true
         job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
-            val response = apiService.getPengujianMaterialPabrikan(noPengujian, status, pageIn, pageSize)
+            val response =
+                apiService.getPengujianMaterialPabrikan(noPengujian, status, pageIn, pageSize)
 
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {

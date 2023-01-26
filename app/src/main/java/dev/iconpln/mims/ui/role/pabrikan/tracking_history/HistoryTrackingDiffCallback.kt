@@ -4,10 +4,10 @@ import androidx.recyclerview.widget.DiffUtil
 import dev.iconpln.mims.data.remote.response.DataItemDetailHistoryTracking
 import dev.iconpln.mims.data.remote.response.DataItemHistory
 
-class HistoryTrackingDiffCallback (
-        private val mOldHistoryTracking: List<DataItemHistory>,
-        private val mNewHistoryTracking: List<DataItemHistory>
-        ): DiffUtil.Callback() {
+class HistoryTrackingDiffCallback(
+    private val mOldHistoryTracking: List<DataItemHistory>,
+    private val mNewHistoryTracking: List<DataItemHistory>
+) : DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return mOldHistoryTracking.size
     }
@@ -35,10 +35,10 @@ class HistoryTrackingDiffCallback (
     }
 }
 
-class DetailHistoryTrackingDiffCallback (
+class DetailHistoryTrackingDiffCallback(
     private val mOldHistoryTracking: List<DataItemDetailHistoryTracking>,
     private val mNewHistoryTracking: List<DataItemDetailHistoryTracking>
-): DiffUtil.Callback() {
+) : DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return mOldHistoryTracking.size
     }

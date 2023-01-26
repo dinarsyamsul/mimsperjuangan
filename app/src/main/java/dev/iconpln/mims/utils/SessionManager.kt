@@ -42,7 +42,13 @@ class SessionManager @Inject constructor(
             pref[NAMA_CABANG]
         }
 
-    suspend fun saveAuthToken(user_token: String, device_token: String, role_id: String, user_name: String, nama_cabang: String) {
+    suspend fun saveAuthToken(
+        user_token: String,
+        device_token: String,
+        role_id: String,
+        user_name: String,
+        nama_cabang: String
+    ) {
         context.dataStore.edit { pref ->
             pref[USER_TOKEN] = user_token
             pref[DEVICE_TOKEN] = device_token

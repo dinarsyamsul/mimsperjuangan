@@ -11,10 +11,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
-import dev.iconpln.mims.ui.role.pabrikan.pengujian.PengujianActivity
 import dev.iconpln.mims.databinding.FragmentHomeBinding
 import dev.iconpln.mims.ui.login.LoginActivity
 import dev.iconpln.mims.ui.role.pabrikan.arttribute_material.DataAtributMaterialActivity
+import dev.iconpln.mims.ui.role.pabrikan.pengujian.PengujianActivity
 import dev.iconpln.mims.ui.role.pabrikan.purchase_order.MonitoringPurchaseOrderActivity
 import dev.iconpln.mims.ui.role.pabrikan.tracking_history.TrackingActivity
 import dev.iconpln.mims.utils.SessionManager
@@ -59,10 +59,10 @@ class HomeFragment : Fragment() {
             context?.startActivity(intent)
         }
 
-         session = SessionManager(requireContext())
+        session = SessionManager(requireContext())
 
         binding.btnLogout.setOnClickListener {
-           showLogoutDialog()
+            showLogoutDialog()
         }
 
         binding.card3.setOnClickListener {

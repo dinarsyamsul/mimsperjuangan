@@ -37,11 +37,11 @@ class ProfileFragment : Fragment() {
 
         session = SessionManager(requireContext())
 
-        session.user_name.asLiveData().observe(viewLifecycleOwner){
+        session.user_name.asLiveData().observe(viewLifecycleOwner) {
             binding.tvNamaUser.text = it
         }
 
-        session.nama_cabang.asLiveData().observe(viewLifecycleOwner){
+        session.nama_cabang.asLiveData().observe(viewLifecycleOwner) {
             binding.tvNamaCabang.text = it
         }
 

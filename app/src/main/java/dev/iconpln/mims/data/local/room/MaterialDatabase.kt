@@ -10,11 +10,11 @@ import dev.iconpln.mims.data.local.entity.MaterialEntity
 abstract class MaterialDatabase : RoomDatabase() {
     abstract fun materialDao(): MaterialDao
 
-    companion object{
+    companion object {
         @Volatile
         private var instance: MaterialDatabase? = null
         fun getInstance(context: Context): MaterialDatabase =
-            instance ?: synchronized(this){
+            instance ?: synchronized(this) {
                 instance ?: Room.databaseBuilder(
                     context.applicationContext,
                     MaterialDatabase::class.java, "Material.db"

@@ -1,21 +1,18 @@
 package dev.iconpln.mims.ui.role.pabrikan.pengujian
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import dev.iconpln.mims.R
 import dev.iconpln.mims.databinding.ActivityPengujianBinding
 import dev.iconpln.mims.ui.role.pabrikan.DashboardPabrikanActivity
 import java.util.*
-import kotlin.collections.ArrayList
 
 @AndroidEntryPoint
 class PengujianActivity : AppCompatActivity() {
@@ -52,17 +49,17 @@ class PengujianActivity : AppCompatActivity() {
 
         pengujianViewModel.getPengujian(noPengujian, status)
 
-        pengujianViewModel.pengujianResponse.observe(this){
+        pengujianViewModel.pengujianResponse.observe(this) {
             rvAdapter.setData(it.data)
         }
 
-        pengujianViewModel.errorMessage.observe(this){
+        pengujianViewModel.errorMessage.observe(this) {
             rvAdapter.setData(listOf())
         }
 
-        binding.srcNoPengujian.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        binding.srcNoPengujian.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                if (query != null){
+                if (query != null) {
                     val mQuery = query.uppercase(Locale.ROOT)
                     noPengujian = mQuery
                     pengujianViewModel.getPengujian(noPengujian, status)
@@ -71,7 +68,7 @@ class PengujianActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                if (newText != null){
+                if (newText != null) {
                     noPengujian = newText.uppercase(Locale.ROOT)
                     pengujianViewModel.getPengujian(noPengujian, status)
                 }
@@ -81,10 +78,10 @@ class PengujianActivity : AppCompatActivity() {
 
         binding.statusKategori.setOnItemClickListener { _, _, _, _ ->
             status = binding.statusKategori.text.toString()
-            if (status == "SEMUA"){
+            if (status == "SEMUA") {
                 status = ""
             }
-            pengujianViewModel.getPengujian(noPengujian,status)
+            pengujianViewModel.getPengujian(noPengujian, status)
         }
 
         pengujianViewModel.isLoading.observe(this) {
@@ -96,10 +93,10 @@ class PengujianActivity : AppCompatActivity() {
         }
     }
 
-    private fun getListTanggalUji(): ArrayList<PengujianRecycler>{
+    private fun getListTanggalUji(): ArrayList<PengujianRecycler> {
         val tanggalUji = resources.getStringArray(R.array.data_tahun)
         val listTanggalUji = ArrayList<PengujianRecycler>()
-        for (i in tanggalUji.indices ){
+        for (i in tanggalUji.indices) {
             val tahun = PengujianRecycler(tanggalUji[i])
             listTanggalUji.add(tahun)
         }

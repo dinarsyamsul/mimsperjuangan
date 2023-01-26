@@ -93,8 +93,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textSize="12sp"
                 android:textColor="#313132"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2nomaterial"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2nomaterial"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2nomaterial" />
@@ -108,7 +108,7 @@
                 android:layout_marginTop="16dp"
                 android:src="@drawable/plant_list_monitoring1"
                 app:layout_constraintStart_toStartOf="@id/txt_titik2packaging"
-                app:layout_constraintTop_toBottomOf="@id/txt_titik2packaging"/>
+                app:layout_constraintTop_toBottomOf="@id/txt_titik2packaging" />
 
             <TextView
                 android:id="@+id/txt_batch"
@@ -155,9 +155,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="120dp"
                 android:src="@drawable/plant_list_monitoring1"
-                app:layout_constraintStart_toEndOf="@+id/txt_nomaterial"
                 app:layout_constraintBottom_toBottomOf="@id/txt_nomaterial"
-                app:layout_constraintTop_toTopOf="@id/txt_nomaterial"/>
+                app:layout_constraintStart_toEndOf="@+id/txt_nomaterial"
+                app:layout_constraintTop_toTopOf="@id/txt_nomaterial" />
 
             <TextView
                 android:id="@+id/txt_packaging"
@@ -166,8 +166,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No Packaging"
-                android:textSize="12sp"
                 android:textColor="@color/black"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@id/img_packaging"
                 app:layout_constraintStart_toEndOf="@id/img_packaging"
                 app:layout_constraintTop_toTopOf="@id/img_packaging" />
@@ -203,7 +203,7 @@
                 android:layout_marginTop="16dp"
                 android:src="@drawable/kuantitas_list_monitoring1"
                 app:layout_constraintStart_toStartOf="@+id/txt_titik2spesifikasi"
-                app:layout_constraintTop_toBottomOf="@id/txt_titik2spesifikasi"/>
+                app:layout_constraintTop_toBottomOf="@id/txt_titik2spesifikasi" />
 
             <TextView
                 android:id="@+id/txt_SPLN"
@@ -225,8 +225,8 @@
                 android:text=" : "
                 android:textColor="#313132"
                 android:textSize="16dp"
-                app:layout_constraintStart_toStartOf="@+id/img_SPLN"
                 app:layout_constraintEnd_toEndOf="@+id/img_SPLN"
+                app:layout_constraintStart_toStartOf="@+id/img_SPLN"
                 app:layout_constraintTop_toBottomOf="@id/txt_SPLN" />
 
             <TextView
@@ -248,8 +248,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:src="@drawable/kuantitas_list_monitoring1"
-                app:layout_constraintTop_toBottomOf="@id/txt_material"
-                app:layout_constraintStart_toStartOf="@id/txt_titik2nomaterial"/>
+                app:layout_constraintStart_toStartOf="@id/txt_titik2nomaterial"
+                app:layout_constraintTop_toBottomOf="@id/txt_material" />
 
             <TextView
                 android:id="@+id/txt_spesifikasi"
@@ -279,10 +279,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
-                android:text="xx-xxx-xxx"
                 android:gravity="start"
-                android:textSize="12sp"
+                android:text="xx-xxx-xxx"
                 android:textColor="#313132"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2spesifikasi"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2spesifikasi"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2spesifikasi" />
@@ -295,9 +295,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/kuantitas_list_monitoring1"
-                app:layout_constraintTop_toBottomOf="@id/txt_titik2batch"
+                app:layout_constraintEnd_toEndOf="@id/txt_titik2batch"
                 app:layout_constraintStart_toStartOf="@id/txt_titik2batch"
-                app:layout_constraintEnd_toEndOf="@id/txt_titik2batch"/>
+                app:layout_constraintTop_toBottomOf="@id/txt_titik2batch" />
 
             <TextView
                 android:id="@+id/txt_kategori"

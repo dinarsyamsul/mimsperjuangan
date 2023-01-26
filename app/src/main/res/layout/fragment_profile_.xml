@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#BAB2B2">
 
     <ImageView
         android:id="@+id/header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:background="@drawable/dashboard" />
-
+        android:background="@drawable/dashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
@@ -28,19 +23,22 @@
         android:text="P r o f i l e U s e r"
         android:textColor="@color/white"
         android:textSize="16dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_profile"
         android:layout_width="match_parent"
         android:layout_height="135dp"
-        android:layout_marginTop="54dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="54dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/profileuser"
-        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/header" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/back"
@@ -49,49 +47,48 @@
         android:layout_marginTop="50dp"
         android:elevation="10dp"
         android:src="@drawable/foto"
-        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintBottom_toTopOf="@id/img_profile"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/header" />
 
     <TextView
         android:id="@+id/tv_nama_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Pabrikan"
-        android:fontFamily="@font/montserrat_reguler"
-        android:textStyle="bold"
-        android:textSize="16sp"
         android:layout_marginTop="45dp"
-        app:layout_constraintTop_toTopOf="@id/img_profile"
+        android:fontFamily="@font/montserrat_reguler"
+        android:text="Nama Pabrikan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/img_profile"
         app:layout_constraintStart_toStartOf="@id/img_profile"
-        app:layout_constraintEnd_toEndOf="@id/img_profile"/>
+        app:layout_constraintTop_toTopOf="@id/img_profile" />
 
     <TextView
         android:id="@+id/tv_nama_cabang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Cabang"
-        android:fontFamily="@font/montserrat_reguler"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toTopOf="@id/tv_nama_user"
+        android:fontFamily="@font/montserrat_reguler"
+        android:text="Nama Cabang"
+        app:layout_constraintEnd_toEndOf="@id/tv_nama_user"
         app:layout_constraintStart_toStartOf="@id/tv_nama_user"
-        app:layout_constraintEnd_toEndOf="@id/tv_nama_user"/>
+        app:layout_constraintTop_toTopOf="@id/tv_nama_user" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_logout_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="L O G O U T"
-        android:textColor="#B80F0A"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/btn_logout"
         android:fontFamily="@font/montserrat_reguler"
-        app:layout_constraintTop_toBottomOf="@id/img_profile"
+        android:text="L O G O U T"
+        android:textColor="#B80F0A"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
+        app:layout_constraintTop_toBottomOf="@id/img_profile" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

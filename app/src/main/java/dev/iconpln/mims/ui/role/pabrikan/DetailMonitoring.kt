@@ -1,7 +1,7 @@
 package dev.iconpln.mims.ui.role.pabrikan
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import dev.iconpln.mims.R
 
 class DetailMonitoring : AppCompatActivity() {
@@ -10,7 +10,7 @@ class DetailMonitoring : AppCompatActivity() {
         setContentView(R.layout.activity_detail_monitoring)
     }
 
-    companion object{
+    companion object {
         const val EXTRA_SN = "extra_sn"
     }
 }

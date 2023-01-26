@@ -1,24 +1,19 @@
 package dev.iconpln.mims.ui.role.pabrikan.tracking_history
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
 import dagger.hilt.android.AndroidEntryPoint
-import dev.iconpln.mims.R
-import dev.iconpln.mims.data.remote.response.DataItemDetailHistoryTracking
 import dev.iconpln.mims.data.remote.response.DataItemHistory
 import dev.iconpln.mims.databinding.ActivityTrackingBinding
-import dev.iconpln.mims.databinding.DataMaterialTrackingBinding
 import dev.iconpln.mims.ui.role.pabrikan.DashboardPabrikanActivity
-import dev.iconpln.mims.ui.role.pabrikan.DetailMonitoring.Companion.EXTRA_SN
 import dev.iconpln.mims.ui.scan.CustomScanActivity
 import dev.iconpln.mims.utils.MemuatData
 
@@ -49,15 +44,15 @@ class TrackingActivity : AppCompatActivity() {
 
         historyTrackingViewModel.getHistoryTracking()
 
-        historyTrackingViewModel.historyTrackingResponse.observe(this){
+        historyTrackingViewModel.historyTrackingResponse.observe(this) {
             rvAdapter.setData(it.data)
         }
 
-        historyTrackingViewModel.errorMessage.observe(this){
+        historyTrackingViewModel.errorMessage.observe(this) {
             rvAdapter.setData(listOf())
         }
 
-        historyTrackingViewModel.isLoading.observe(this){
+        historyTrackingViewModel.isLoading.observe(this) {
             if (it == true) {
                 binding.progressBar.visibility = View.VISIBLE
             } else {
@@ -73,8 +68,8 @@ class TrackingActivity : AppCompatActivity() {
         }
     }
 
-    private fun showSelectedHistory(){
-        rvAdapter.setOnItemClickCallBack(object : ListHistoryTrackingAdapter.OnItemClickCallBack{
+    private fun showSelectedHistory() {
+        rvAdapter.setOnItemClickCallBack(object : ListHistoryTrackingAdapter.OnItemClickCallBack {
             override fun onItemClicked(data: DataItemHistory) {
                 val toDetailHistory =
                     Intent(this@TrackingActivity, DataDetailTrackingActivity::class.java)
@@ -82,7 +77,7 @@ class TrackingActivity : AppCompatActivity() {
                 startActivity(toDetailHistory)
             }
         })
-        }
+    }
 
     private fun openScanner() {
         val scan = ScanOptions()
@@ -109,4 +104,4 @@ class TrackingActivity : AppCompatActivity() {
 //             CANCELED
         }
     }
-    }
+}
