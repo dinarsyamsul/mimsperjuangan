@@ -128,7 +128,6 @@
                 android:id="@+id/txt_titik2batch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
                 android:textColor="#3F3D56"

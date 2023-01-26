@@ -22,7 +22,7 @@ class PengujianActivity : AppCompatActivity() {
     private val pengujianViewModel: PengujianViewModel by viewModels()
     private lateinit var rvAdapter: ListPengujianAdapter
     private var noPengujian: String? = ""
-    private var status: String? = "BELUM UJI"
+    private var status: String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,6 +78,9 @@ class PengujianActivity : AppCompatActivity() {
 
         binding.statusKategori.setOnItemClickListener { _, _, _, _ ->
             status = binding.statusKategori.text.toString()
+            if (status == "SEMUA"){
+                status = ""
+            }
             pengujianViewModel.getPengujian(noPengujian,status)
         }
     }

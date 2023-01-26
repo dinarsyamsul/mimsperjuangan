@@ -127,7 +127,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/txt_input_layout"
                     android:inputType="none"
-                    android:text="BELUM UJI" />
+                    android:text="PILIH STATUS" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

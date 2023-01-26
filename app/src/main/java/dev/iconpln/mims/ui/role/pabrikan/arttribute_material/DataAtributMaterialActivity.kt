@@ -84,6 +84,14 @@ class DataAtributMaterialActivity : AppCompatActivity() {
 
         materialViewModel.materialResponse.observe(this) {
             rvAdapter.setData(it.data)
+            binding.txtJumlahData.text = "${it.data.size} Data"
+        }
+
+        materialViewModel.errorMessage.observe(this){
+            if (it != null){
+                rvAdapter.setData(listOf())
+                binding.txtJumlahData.text = "Tidak ada data"
+            }
         }
 
         binding.srcNomorBatch.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
@@ -105,6 +113,10 @@ class DataAtributMaterialActivity : AppCompatActivity() {
             }
         })
 
+        binding.srcNomorBatch.setOnClickListener {
+            binding.srcNomorBatch.isIconified = false
+        }
+
         binding.dropdownKategori.setOnItemClickListener { _, _, _, _ ->
             val isiData = binding.dropdownKategori.text.toString()
             when(isiData){
@@ -112,12 +124,16 @@ class DataAtributMaterialActivity : AppCompatActivity() {
                 "Trafo Distribusi" -> kategori = "0103"
                 "Mini Circuit Breaker" -> kategori = "0325"
                 "Current Transformer" -> kategori = "0205"
+                "Semua" -> kategori = ""
             }
             materialViewModel.getAllMaterial(kategori, tahun, snOrNoProd)
         }
 
         binding.dropdownTahun.setOnItemClickListener { _, _, _, _ ->
             tahun = binding.dropdownTahun.text.toString()
+            if (tahun == "Semua"){
+                tahun = ""
+            }
             materialViewModel.getAllMaterial(kategori, tahun, snOrNoProd)
         }
 

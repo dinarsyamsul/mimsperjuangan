@@ -71,6 +71,10 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
             }
         })
 
+        binding.srcDetaildataatributematerial.setOnClickListener {
+            binding.srcDetaildataatributematerial.isIconified = false
+        }
+
         showSelectedMaterial()
     }
 

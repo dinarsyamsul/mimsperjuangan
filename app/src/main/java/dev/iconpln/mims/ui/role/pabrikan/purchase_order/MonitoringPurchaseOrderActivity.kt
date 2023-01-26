@@ -105,6 +105,10 @@ class MonitoringPurchaseOrderActivity : AppCompatActivity() {
             }
         })
 
+        binding.srcNomorBatch.setOnClickListener {
+            binding.srcNomorBatch.isIconified = false
+        }
+
         binding.urutBerdasarkan.setOnItemClickListener { _, _, _, _ ->
             urut = binding.urutBerdasarkan.text.toString()
             monitoringPOViewModel.getMonitoringPO(noPO, urut)
