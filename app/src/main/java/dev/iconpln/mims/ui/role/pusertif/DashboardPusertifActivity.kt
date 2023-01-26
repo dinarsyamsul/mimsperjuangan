@@ -2,6 +2,10 @@ package dev.iconpln.mims.ui.role.pusertif
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import dev.iconpln.mims.R
 import dev.iconpln.mims.databinding.ActivityDashboardPusertifBinding
 
 class DashboardPusertifActivity : AppCompatActivity() {
@@ -11,22 +15,18 @@ class DashboardPusertifActivity : AppCompatActivity() {
         binding = ActivityDashboardPusertifBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val session = TokenManager(this)
-//
-//        binding.btnLogout.setOnClickListener {
-//            val onLogout = Intent(this@DashboardPusertifActivity, LoginActivity::class.java)
-//            onLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-//            onLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-//
-//            lifecycleScope.launch {
-//                session.clearUserToken()
-//            }
-//            session.user_token.asLiveData().observe(this) {
-//                Log.d("MainActivity", "cek token : $it")
-//            }
-//            onLogout.flags = Intent.FLAG_AC   TIVITY_NEW_TASK
-//            startActivity(onLogout)
-//            finish()
+        val navView: BottomNavigationView = binding.navViewPusertif
+
+        val navController = findNavController(R.id.nav_host_fragment_activity_bottom_navigation)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+//            )
+//        )
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 }
 //}

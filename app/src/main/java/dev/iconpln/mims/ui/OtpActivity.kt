@@ -144,6 +144,9 @@ class OtpActivity : AppCompatActivity() {
                 if (input2.text.toString().isNotEmpty()) {
                     input2.clearFocus()
                     input3.requestFocus()
+                } else {
+                    input2.clearFocus()
+                    input1.requestFocus()
                 }
             }
 
@@ -161,6 +164,9 @@ class OtpActivity : AppCompatActivity() {
                 if (input3.text.toString().isNotEmpty()) {
                     input3.clearFocus()
                     input4.requestFocus()
+                } else {
+                    input3.clearFocus()
+                    input2.requestFocus()
                 }
             }
 
@@ -178,6 +184,9 @@ class OtpActivity : AppCompatActivity() {
                 if (input4.text.toString().isNotEmpty()) {
                     input4.clearFocus()
                     input5.requestFocus()
+                } else {
+                    input4.clearFocus()
+                    input3.requestFocus()
                 }
             }
 
@@ -195,6 +204,26 @@ class OtpActivity : AppCompatActivity() {
                 if (input5.text.toString().isNotEmpty()) {
                     input5.clearFocus()
                     input6.requestFocus()
+                } else {
+                    input5.clearFocus()
+                    input4.requestFocus()
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                // TODO("Not yet implemented")
+            }
+        })
+
+        binding.edtotp6.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                // TODO("Not yet implemented")
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (input6.text.toString().isEmpty()) {
+                    input6.clearFocus()
+                    input5.requestFocus()
                 }
             }
 

@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -84,17 +84,17 @@ class HomeFragment : Fragment() {
             setMessage(dialogMessage)
             setCancelable(false)
             setPositiveButton("Ya") { _, _ ->
-                val onLogout = Intent(requireContext(), dev.iconpln.mims.ui.login.LoginActivity::class.java)
-                onLogout.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                onLogout.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                val onLogout = Intent(requireContext(), LoginActivity::class.java)
+                onLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                onLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
 
                 lifecycleScope.launch {
                     session.clearUserToken()
                 }
                 session.user_token.asLiveData().observe(viewLifecycleOwner) {
-                    android.util.Log.d("MainActivity", "cek token : $it")
+                    Log.d("MainActivity", "cek token : $it")
                 }
-                onLogout.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+                Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(onLogout)
                 activity?.finish()
             }
