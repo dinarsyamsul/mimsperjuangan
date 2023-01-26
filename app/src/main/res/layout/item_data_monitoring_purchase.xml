@@ -38,6 +38,7 @@
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No. PO"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/vw_line"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +60,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Smart/Meter"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintStart_toEndOf="@+id/vw_circle"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +71,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="123123123123"
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_noPo" />
 
@@ -91,7 +92,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Plant"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_plant"
                 app:layout_constraintStart_toEndOf="@id/img_plant"
                 app:layout_constraintTop_toTopOf="@id/img_plant" />
@@ -103,7 +105,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_plant"
                 app:layout_constraintStart_toEndOf="@id/txt_plant"
@@ -115,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2" />
@@ -139,7 +141,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Store Loc"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_store"
                 app:layout_constraintStart_toEndOf="@id/img_store"
                 app:layout_constraintTop_toTopOf="@id/img_store" />
@@ -151,7 +154,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_store"
                 app:layout_constraintStart_toEndOf="@id/txt_store"
@@ -163,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2store"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2store"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2store" />
@@ -187,7 +190,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Unit"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_unit"
                 app:layout_constraintStart_toEndOf="@id/img_unit"
                 app:layout_constraintTop_toTopOf="@id/img_unit" />
@@ -199,7 +203,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_unit"
                 app:layout_constraintStart_toEndOf="@id/txt_unit"
@@ -211,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="APJ CIMAHI"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2unit"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2unit"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2unit" />
@@ -235,7 +239,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Kuantitas"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_kuantitas"
                 app:layout_constraintStart_toEndOf="@id/img_kuantitas"
                 app:layout_constraintTop_toTopOf="@id/img_kuantitas" />
@@ -247,7 +252,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_kuantitas"
                 app:layout_constraintStart_toEndOf="@id/txt_kuantitas"
@@ -259,7 +264,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="55"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2kuantitas"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2kuantitas"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2kuantitas" />

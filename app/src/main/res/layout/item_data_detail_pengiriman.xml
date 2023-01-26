@@ -37,6 +37,7 @@
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="SN Material"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/vw_line"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,7 +59,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Tanggal Produksi 12/07/2022"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintStart_toEndOf="@+id/vw_circle"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +71,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="123123123123"
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_noPo" />
 
@@ -91,7 +92,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No Material"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_nomaterial"
                 app:layout_constraintStart_toEndOf="@id/img_nomaterial"
                 app:layout_constraintTop_toTopOf="@id/img_nomaterial" />
@@ -103,7 +105,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_nomaterial"
                 app:layout_constraintStart_toEndOf="@id/txt_nomaterial"
@@ -115,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2nomaterial"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2nomaterial"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2nomaterial" />
@@ -139,7 +141,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No Meterologi"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_batch"
                 app:layout_constraintStart_toEndOf="@id/img_batch"
                 app:layout_constraintTop_toTopOf="@id/img_batch" />
@@ -151,7 +154,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_batch"
                 app:layout_constraintStart_toEndOf="@id/txt_batch"
@@ -163,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2batch"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2batch"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2batch" />
@@ -189,7 +192,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No Batch"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_packaging"
                 app:layout_constraintStart_toEndOf="@id/img_packaging"
                 app:layout_constraintTop_toTopOf="@id/img_packaging" />
@@ -201,7 +205,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_packaging"
                 app:layout_constraintStart_toEndOf="@id/txt_packaging"
@@ -213,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2packaging"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2packaging"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2packaging" />
@@ -237,7 +241,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Garansi"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_SPLN"
                 app:layout_constraintStart_toEndOf="@id/img_SPLN"
                 app:layout_constraintTop_toTopOf="@id/img_SPLN" />
@@ -249,7 +254,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_SPLN"
                 app:layout_constraintStart_toEndOf="@id/txt_SPLN"
@@ -261,7 +266,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="5112111223344"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2SPLN"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2SPLN"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2SPLN" />
@@ -285,7 +290,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="SPLN"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_spesifikasi"
                 app:layout_constraintStart_toEndOf="@id/img_spesifikasi"
                 app:layout_constraintTop_toTopOf="@id/img_spesifikasi" />
@@ -297,7 +303,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_spesifikasi"
                 app:layout_constraintStart_toEndOf="@id/txt_spesifikasi"
@@ -309,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="xx-xxx-xxx"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2spesifikasi"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2spesifikasi"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2spesifikasi" />
@@ -333,7 +339,8 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Spesifikasi"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/img_kategori"
                 app:layout_constraintStart_toEndOf="@id/img_kategori"
                 app:layout_constraintTop_toTopOf="@id/img_kategori" />
@@ -345,7 +352,7 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="@id/txt_kategori"
                 app:layout_constraintStart_toEndOf="@id/txt_kategori"
@@ -357,7 +364,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="xx-xxx-xxx"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2kategori"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2kategori"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2kategori" />

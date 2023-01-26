@@ -49,7 +49,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="123123123123"
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_noPo" />
 
@@ -70,7 +70,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No Material"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/img_nomaterial"
                 app:layout_constraintStart_toEndOf="@id/img_nomaterial"
                 app:layout_constraintTop_toTopOf="@id/img_nomaterial" />
@@ -82,21 +82,20 @@
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txt_nomaterial" />
 
             <TextView
                 android:id="@+id/txt_material"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textColor="#96979B"
                 android:textSize="12sp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/img_packaging"
+                android:textColor="#313132"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2nomaterial"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2nomaterial"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2nomaterial" />
 
@@ -109,7 +108,6 @@
                 android:layout_marginTop="16dp"
                 android:src="@drawable/plant_list_monitoring1"
                 app:layout_constraintStart_toStartOf="@id/txt_titik2packaging"
-
                 app:layout_constraintTop_toBottomOf="@id/txt_titik2packaging"/>
 
             <TextView
@@ -119,7 +117,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No Batch"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/img_batch"
                 app:layout_constraintStart_toEndOf="@id/img_batch"
                 app:layout_constraintTop_toTopOf="@id/img_batch" />
@@ -128,9 +126,10 @@
                 android:id="@+id/txt_titik2batch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="@id/img_batch"
                 app:layout_constraintTop_toBottomOf="@id/txt_batch" />
@@ -140,8 +139,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
-                android:text="123123fd11"
-                android:textColor="#96979B"
+                android:text="12312311"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2batch"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2batch"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2batch" />
@@ -168,7 +167,7 @@
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No Packaging"
                 android:textSize="12sp"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/img_packaging"
                 app:layout_constraintStart_toEndOf="@id/img_packaging"
                 app:layout_constraintTop_toTopOf="@id/img_packaging" />
@@ -179,7 +178,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="@id/img_packaging"
                 app:layout_constraintTop_toBottomOf="@id/txt_packaging" />
@@ -190,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="12312311"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2packaging"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2packaging"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2packaging" />
@@ -204,7 +203,7 @@
                 android:layout_marginTop="16dp"
                 android:src="@drawable/kuantitas_list_monitoring1"
                 app:layout_constraintStart_toStartOf="@+id/txt_titik2spesifikasi"
-                app:layout_constraintTop_toBottomOf="@id/txt_isispesifikasi"/>
+                app:layout_constraintTop_toBottomOf="@id/txt_titik2spesifikasi"/>
 
             <TextView
                 android:id="@+id/txt_SPLN"
@@ -213,7 +212,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="SPLN"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/img_SPLN"
                 app:layout_constraintStart_toEndOf="@id/img_SPLN"
                 app:layout_constraintTop_toTopOf="@id/img_SPLN" />
@@ -224,7 +223,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="@+id/img_SPLN"
                 app:layout_constraintEnd_toEndOf="@+id/img_SPLN"
@@ -236,7 +235,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="5112111223344"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2SPLN"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2SPLN"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2SPLN" />
@@ -259,7 +258,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Spesifikasi"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/img_spesifikasi"
                 app:layout_constraintStart_toEndOf="@id/img_spesifikasi"
                 app:layout_constraintTop_toTopOf="@id/img_spesifikasi" />
@@ -270,7 +269,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="@+id/img_spesifikasi"
                 app:layout_constraintTop_toBottomOf="@id/txt_spesifikasi" />
@@ -283,9 +282,8 @@
                 android:text="xx-xxx-xxx"
                 android:gravity="start"
                 android:textSize="12sp"
-                android:textColor="#96979B"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toStartOf="@id/img_batch"
+                android:textColor="#313132"
+                app:layout_constraintBottom_toBottomOf="@id/txt_titik2spesifikasi"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2spesifikasi"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2spesifikasi" />
 
@@ -308,7 +306,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Kategori"
-                android:textColor="#3F3D56"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/img_kategori"
                 app:layout_constraintStart_toEndOf="@id/img_kategori"
                 app:layout_constraintTop_toTopOf="@id/img_kategori" />
@@ -319,7 +317,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text=" : "
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="@+id/img_kategori"
                 app:layout_constraintTop_toBottomOf="@id/txt_kategori" />
@@ -330,7 +328,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="xx-xxx-xxx"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintBottom_toBottomOf="@id/txt_titik2kategori"
                 app:layout_constraintStart_toEndOf="@id/txt_titik2kategori"
                 app:layout_constraintTop_toTopOf="@id/txt_titik2kategori" />

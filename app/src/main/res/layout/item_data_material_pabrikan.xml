@@ -37,6 +37,7 @@
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="No. Batch : "
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/vw_line"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,7 +59,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="Excel/API"
-                android:textColor="#96979B"
+                android:textColor="#313132"
                 app:layout_constraintStart_toEndOf="@+id/vw_circle"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,7 +70,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_reguler"
                 android:text="123123123123"
-                android:textColor="#3F3D56"
+                android:textColor="#313132"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_noBatch" />
 
