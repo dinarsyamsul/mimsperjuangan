@@ -61,6 +61,8 @@ class MaterialViewModel @Inject constructor(private val apiService: ApiService) 
     fun getDetailMaterial(
         noProduksi: String? = "",
         noMaterial: String? = "",
+        tahun: String? = "",
+        kodeGerak: String? = "",
         serialNumber: String? = "",
         pageIn: Int? = 1,
         pageSize: Int? = 100
@@ -68,7 +70,7 @@ class MaterialViewModel @Inject constructor(private val apiService: ApiService) 
         _isLoading.value = true
         job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
             val response =
-                apiService.getDetailMaterial(noProduksi, noMaterial, serialNumber, pageIn, pageSize)
+                apiService.getDetailMaterial(noProduksi, noMaterial, tahun, kodeGerak, serialNumber, pageIn, pageSize)
 
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {

@@ -159,8 +159,8 @@ class DataAtributMaterialActivity : AppCompatActivity() {
                         DetailDataAtributeMaterialActivity::class.java
                     )
                 toDetailMaterial.putExtra(
-                    DetailDataAtributeMaterialActivity.EXTRA_SN,
-                    data.nomorMaterial
+                    DetailDataAtributeMaterialActivity.EXTRA_NO_BATCH,
+                    data.noProduksi
                 )
                 startActivity(toDetailMaterial)
             }

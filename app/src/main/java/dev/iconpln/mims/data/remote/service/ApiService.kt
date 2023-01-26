@@ -70,6 +70,8 @@ interface ApiService {
     suspend fun getDetailMaterial(
         @Query("no_produksi") noProduksi: String?,
         @Query("nomor_material") nomorMaterial: String?,
+        @Query("tahun") tahun: String?,
+        @Query("kode_gerak") kodeGerak: String?,
         @Query("serial_number") serialNumber: String?,
         @Query("page_in") pageIn: Int? = 1,
         @Query("page_size") pageSize: Int? = 20

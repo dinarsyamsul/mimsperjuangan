@@ -45,9 +45,9 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
             Log.d("DetailAtribut", "cek kiriman data: $data")
         }
 
-        val noMaterial = data?.getString(EXTRA_SN)
-        if (noMaterial != null) {
-            materialViewModel.getDetailMaterial("", noMaterial, serialNumber)
+        val noProduksi = data?.getString(EXTRA_NO_BATCH)
+        if (noProduksi != null) {
+            materialViewModel.getDetailMaterial(noProduksi, "", serialNumber)
         }
 
         materialViewModel.detailMaterialResponse.observe(this) {
@@ -109,6 +109,6 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_SN = "no_material"
+        const val EXTRA_NO_BATCH = "no_batch"
     }
 }
