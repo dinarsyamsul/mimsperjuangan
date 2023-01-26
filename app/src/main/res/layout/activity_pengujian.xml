@@ -148,10 +148,10 @@
                 android:id="@+id/cv_pengujian"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:paddingBottom="10dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:paddingBottom="10dp"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -168,6 +168,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:listitem="@layout/item_pengujian" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 

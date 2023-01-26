@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -51,6 +52,19 @@ class TrackingActivity : AppCompatActivity() {
         historyTrackingViewModel.historyTrackingResponse.observe(this){
             rvAdapter.setData(it.data)
         }
+
+        historyTrackingViewModel.errorMessage.observe(this){
+            rvAdapter.setData(listOf())
+        }
+
+        historyTrackingViewModel.isLoading.observe(this){
+            if (it == true) {
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
+        }
+
         showSelectedHistory()
 
         binding.btnScnQRtrckg.setOnClickListener {

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -53,6 +54,12 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
             rvAdapter.setData(it.data)
         }
 
+        materialViewModel.errorMessage.observe(this){
+            if (it != null){
+                rvAdapter.setData(listOf())
+            }
+        }
+
         binding.srcDetaildataatributematerial.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 if (query != null){
@@ -73,6 +80,14 @@ class DetailDataAtributeMaterialActivity : AppCompatActivity() {
 
         binding.srcDetaildataatributematerial.setOnClickListener {
             binding.srcDetaildataatributematerial.isIconified = false
+        }
+
+        materialViewModel.isLoading.observe(this) {
+            if (it == true) {
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
         }
 
         showSelectedMaterial()

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
@@ -44,6 +45,21 @@ class DataDetailTrackingActivity : AppCompatActivity() {
         detailHistoryTrackingModel.detailHistoryTracking.observe(this){
             rvAdapter.setData(it.data)
         }
+
+        detailHistoryTrackingModel.errorMessage.observe(this){
+            if (it != null){
+                rvAdapter.setData(listOf())
+            }
+        }
+
+        detailHistoryTrackingModel.isLoading.observe(this){
+            if (it == true) {
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
+        }
+
         binding.btnBack.setOnClickListener {
 
             onBackPressedDispatcher.onBackPressed()

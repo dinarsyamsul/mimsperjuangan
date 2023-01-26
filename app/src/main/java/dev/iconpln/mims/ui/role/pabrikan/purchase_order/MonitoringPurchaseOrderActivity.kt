@@ -2,6 +2,7 @@ package dev.iconpln.mims.ui.role.pabrikan.purchase_order
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.SearchView
 import androidx.activity.viewModels
@@ -86,6 +87,12 @@ class MonitoringPurchaseOrderActivity : AppCompatActivity() {
             rvAdapter.setData(it.data)
         }
 
+        monitoringPOViewModel.errorMessage.observe(this){
+            if (it != null){
+                rvAdapter.setData(listOf())
+            }
+        }
+
         binding.srcNomorBatch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 if (query != null) {
@@ -112,6 +119,14 @@ class MonitoringPurchaseOrderActivity : AppCompatActivity() {
         binding.urutBerdasarkan.setOnItemClickListener { _, _, _, _ ->
             urut = binding.urutBerdasarkan.text.toString()
             monitoringPOViewModel.getMonitoringPO(noPO, urut)
+        }
+
+        monitoringPOViewModel.isLoading.observe(this){
+            if (it == true) {
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
         }
     }
 

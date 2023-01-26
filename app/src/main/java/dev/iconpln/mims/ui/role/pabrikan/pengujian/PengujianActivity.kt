@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.SearchView
 import android.widget.Toast
@@ -52,9 +53,11 @@ class PengujianActivity : AppCompatActivity() {
         pengujianViewModel.getPengujian(noPengujian, status)
 
         pengujianViewModel.pengujianResponse.observe(this){
-//            Log.d("PengujianActivity", "${it.data}")
-            Toast.makeText(this@PengujianActivity, "cek ${it.data}", Toast.LENGTH_SHORT).show()
             rvAdapter.setData(it.data)
+        }
+
+        pengujianViewModel.errorMessage.observe(this){
+            rvAdapter.setData(listOf())
         }
 
         binding.srcNoPengujian.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
@@ -82,6 +85,14 @@ class PengujianActivity : AppCompatActivity() {
                 status = ""
             }
             pengujianViewModel.getPengujian(noPengujian,status)
+        }
+
+        pengujianViewModel.isLoading.observe(this) {
+            if (it == true) {
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
         }
     }
 
